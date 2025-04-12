@@ -129,15 +129,6 @@ def get_random_student():
     logging.info(f"随机选择学生: {chosen}")
     return jsonify({'name': chosen})
 
-@app.route('/static/<path:filename>')
-def serve_static(filename):
-    try:
-        logging.info(f"请求静态文件: {filename}")
-        return send_from_directory('static', secure_filename(filename))
-    except Exception as e:
-        logging.error(f"静态文件访问失败: {str(e)}")
-        abort(404)
-
 @app.errorhandler(404)
 def not_found_error(error):
     logging.warning(f"404错误: {request.path}")
@@ -150,7 +141,7 @@ def internal_error(error):
 
 def check_environment():
     """检查环境配置并打印日志"""
-    logging.info("="*30 + " Flask 应用启动 " + "="*30)
+    logging.info("="*30 + " Flask 应用启动检查 " + "="*30)
     logging.info(f"当前工作目录: {os.getcwd()}")
     logging.info(f"静态文件目录: {app.static_folder} (存在: {os.path.exists(app.static_folder)})")
     logging.info(f"模板文件目录: {app.template_folder} (存在: {os.path.exists(app.template_folder)})")
@@ -158,21 +149,35 @@ def check_environment():
     
     # 检查音频文件
     audio_files = ['roll.mp3', 'select.mp3', 'click.mp3']
-    for audio in audio_files:
-        path = os.path.join(app.static_folder, audio)
-        size = os.path.getsize(path) if os.path.exists(path) else 0
-        logging.info(f"音频文件: {audio} (存在: {os.path.exists(path)}, 大小: {size} 字节)")
-    
+    static_folder_path = os.path.join(os.getcwd(), app.static_folder)
+    if os.path.exists(static_folder_path):
+        for audio in audio_files:
+            path = os.path.join(static_folder_path, audio)
+            size = os.path.getsize(path) if os.path.exists(path) else 0
+            logging.info(f"音频文件: {audio} (存在: {os.path.exists(path)}, 大小: {size} 字节)")
+    else:
+        logging.warning(f"静态文件夹不存在: {static_folder_path}")
+
     # 检查模板文件
-    if os.path.exists(app.template_folder):
-        templates = os.listdir(app.template_folder)
+    template_folder_path = os.path.join(os.getcwd(), app.template_folder)
+    if os.path.exists(template_folder_path):
+        templates = os.listdir(template_folder_path)
         logging.info(f"模板文件列表: {templates}")
-    
+    else:
+        logging.warning(f"模板文件夹不存在: {template_folder_path}")
+
     # 打印路由信息
     routes = []
-    for rule in app.url_map.iter_rules():
-        routes.append(f"{rule} ({', '.join(rule.methods)})")
-    logging.info(f"注册的路由: {routes}")
+    try:
+        for rule in app.url_map.iter_rules():
+            # 排除默认的 static 路由和 HEAD/OPTIONS 方法
+            if rule.endpoint != 'static':
+                 methods = ', '.join(sorted([m for m in rule.methods if m not in ['HEAD', 'OPTIONS']]))
+                 if methods:
+                    routes.append(f"{rule} ({methods})")
+    except Exception as e:
+        logging.error(f"获取路由信息时出错: {e}")
+    logging.info(f"注册的应用路由: {routes}")
 
 if __name__ == '__main__':
     # 检查环境
@@ -184,46 +189,18 @@ if __name__ == '__main__':
         logging.info("创建静态文件目录")
         
     # 初始化学生数据文件
-    if not os.path.exists(STUDENTS_FILE):
+    students_json_path = os.path.join(os.getcwd(), STUDENTS_FILE)
+    if not os.path.exists(students_json_path):
         save_students([])
-        logging.info("初始化学生数据文件")
+        logging.info(f"初始化学生数据文件: {students_json_path}")
     
-    logging.info(f"Flask应用即将在端口 {port} 上启动")
+    logging.info(f"Flask应用即将在端口 {port} 上启动 (直接运行)")
     
     # 应用程序启动
     try:
         # Flask运行
-        app.run(debug=False, host='127.0.0.1', port=port, use_reloader=False, threaded=True)
+        # 移除 threaded=True，让 werkzeug 处理
+        app.run(debug=False, host='127.0.0.1', port=port, use_reloader=False)
     except Exception as e:
         logging.error(f"Flask应用启动失败: {str(e)}")
         raise
-else:
-    # 当作为模块导入时也运行Flask应用
-    # 检查环境
-    check_environment()
-    
-    # 确保数据目录存在
-    if not os.path.exists('static'):
-        os.makedirs('static')
-        logging.info("创建静态文件目录")
-        
-    # 初始化学生数据文件
-    if not os.path.exists(STUDENTS_FILE):
-        save_students([])
-        logging.info("初始化学生数据文件")
-    
-    logging.info(f"Flask应用即将在端口 {port} 上启动(作为模块导入)")
-    
-    # 在单独线程中运行Flask应用，避免阻塞主程序
-    def run_flask_app():
-        try:
-            logging.info("在线程中启动Flask应用...")
-            app.run(debug=False, host='127.0.0.1', port=port, use_reloader=False, threaded=True)
-        except Exception as e:
-            logging.error(f"Flask线程中应用启动失败: {str(e)}")
-    
-    # 创建线程并启动
-    flask_thread = Timer(0.1, run_flask_app)
-    flask_thread.daemon = True  # 设置为守护线程，这样主程序退出时它会自动结束
-    flask_thread.start()
-    logging.info("Flask应用线程已启动")

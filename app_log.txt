@@ -37,3 +37,1777 @@
 2025-04-06 12:26:02,560 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:02] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
 2025-04-06 12:26:07,095 - INFO - 随机选择学生: 王忆
 2025-04-06 12:26:07,095 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:07] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 11:03:34,358 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 11:03:34,370 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 11:03:34,370 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:03:34,371 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:03:34,371 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:03:34,371 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:03:34,371 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:03:34,371 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:03:34,372 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:03:34,372 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:03:34,372 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 11:03:34,373 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 11:03:34,406 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 11:03:34,407 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:04:06,657 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 11:04:06,675 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 11:04:06,677 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:04:06,677 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:04:06,678 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:04:06,678 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:04:06,679 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:04:06,679 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:04:06,680 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:04:06,680 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:04:06,681 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-12 11:04:06,683 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 11:04:06,723 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 11:04:06,724 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:04:37,963 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 11:05:01,212 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 11:05:01,927 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:05:02,640 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:05:03,102 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:05:03,627 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:05:05,681 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:05:06,898 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:05:08,010 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:05:09,110 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:05:11,323 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 11:05:11,463 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 11:05:11,569 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 11:05:11,569 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:08:37,454 - INFO - ==================================================
+2025-04-12 11:08:37,455 - INFO - 班级点名器启动
+2025-04-12 11:08:37,455 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:08:37,456 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 11:08:37,456 - INFO - 系统平台: win32
+2025-04-12 11:08:37,457 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'c:\\Program Files\\Python313\\python313.zip', 'c:\\Program Files\\Python313\\DLLs', 'c:\\Program Files\\Python313\\Lib', 'c:\\Program Files\\Python313', 'c:\\Program Files\\Python313\\Lib\\site-packages', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'c:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 11:08:37,457 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:08:37,457 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 11:08:39,500 - INFO - 使用端口: 5000
+2025-04-12 11:08:39,502 - INFO - 正在导入主应用...
+2025-04-12 11:08:39,503 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 11:08:39,503 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:08:39,504 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:08:39,504 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:08:39,505 - INFO - 执行main.py内容... (文件大小: 2128)
+2025-04-12 11:08:39,864 - ERROR - 执行main.py失败: No module named 'flask_caching'
+2025-04-12 11:08:39,869 - ERROR - Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 192, in main
+    exec(main_code, globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in <module>
+ModuleNotFoundError: No module named 'flask_caching'
+
+2025-04-12 11:08:39,869 - INFO - 尝试备选方案：直接导入main模块...
+2025-04-12 11:08:39,873 - ERROR - 导入主应用失败: No module named 'flask_caching'
+2025-04-12 11:08:39,876 - ERROR - Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 192, in main
+    exec(main_code, globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in <module>
+ModuleNotFoundError: No module named 'flask_caching'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 204, in main
+    import main
+  File "d:\PythonProjects\RollCallPy\main.py", line 2, in <module>
+    from flask_caching import Cache
+ModuleNotFoundError: No module named 'flask_caching'
+
+2025-04-12 11:08:42,076 - INFO - 已尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 11:10:05,408 - INFO - ==================================================
+2025-04-12 11:10:05,409 - INFO - 班级点名器启动
+2025-04-12 11:10:05,409 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:10:05,409 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 11:10:05,410 - INFO - 系统平台: win32
+2025-04-12 11:10:05,410 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'c:\\Program Files\\Python313\\python313.zip', 'c:\\Program Files\\Python313\\DLLs', 'c:\\Program Files\\Python313\\Lib', 'c:\\Program Files\\Python313', 'c:\\Program Files\\Python313\\Lib\\site-packages', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'c:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 11:10:05,410 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:10:05,411 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 11:10:07,419 - INFO - 使用端口: 5000
+2025-04-12 11:10:07,421 - INFO - 正在导入主应用...
+2025-04-12 11:10:07,421 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 11:10:07,422 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:10:07,422 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:10:07,422 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:10:07,422 - INFO - 执行main.py内容... (文件大小: 2128)
+2025-04-12 11:10:07,795 - ERROR - 执行main.py失败: No module named 'flask_talisman'
+2025-04-12 11:10:07,799 - ERROR - Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 192, in main
+    exec(main_code, globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in <module>
+ModuleNotFoundError: No module named 'flask_talisman'
+
+2025-04-12 11:10:07,799 - INFO - 尝试备选方案：直接导入main模块...
+2025-04-12 11:10:07,801 - ERROR - 导入主应用失败: No module named 'flask_talisman'
+2025-04-12 11:10:07,804 - ERROR - Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 192, in main
+    exec(main_code, globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in <module>
+ModuleNotFoundError: No module named 'flask_talisman'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 204, in main
+    import main
+  File "d:\PythonProjects\RollCallPy\main.py", line 3, in <module>
+    from flask_talisman import Talisman
+ModuleNotFoundError: No module named 'flask_talisman'
+
+2025-04-12 11:10:09,996 - INFO - 已尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 11:10:38,005 - INFO - ==================================================
+2025-04-12 11:10:38,006 - INFO - 班级点名器启动
+2025-04-12 11:10:38,006 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:10:38,006 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 11:10:38,007 - INFO - 系统平台: win32
+2025-04-12 11:10:38,007 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'c:\\Program Files\\Python313\\python313.zip', 'c:\\Program Files\\Python313\\DLLs', 'c:\\Program Files\\Python313\\Lib', 'c:\\Program Files\\Python313', 'c:\\Program Files\\Python313\\Lib\\site-packages', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'c:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 11:10:38,007 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:10:38,007 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 11:10:40,056 - INFO - 使用端口: 5000
+2025-04-12 11:10:40,058 - INFO - 正在导入主应用...
+2025-04-12 11:10:40,059 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 11:10:40,059 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:10:40,060 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:10:40,060 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:10:40,061 - INFO - 执行main.py内容... (文件大小: 2128)
+2025-04-12 11:10:40,450 - ERROR - 执行main.py失败: No module named 'flask_limiter'
+2025-04-12 11:10:40,454 - ERROR - Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 192, in main
+    exec(main_code, globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in <module>
+  File "d:\PythonProjects\RollCallPy\routes.py", line 2, in <module>
+    from flask_limiter import Limiter
+ModuleNotFoundError: No module named 'flask_limiter'
+
+2025-04-12 11:10:40,455 - INFO - 尝试备选方案：直接导入main模块...
+2025-04-12 11:10:40,458 - ERROR - 导入主应用失败: No module named 'flask_limiter'
+2025-04-12 11:10:40,460 - ERROR - Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 192, in main
+    exec(main_code, globals())
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 13, in <module>
+  File "d:\PythonProjects\RollCallPy\routes.py", line 2, in <module>
+    from flask_limiter import Limiter
+ModuleNotFoundError: No module named 'flask_limiter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\PythonProjects\RollCallPy\run_app.py", line 204, in main
+    import main
+  File "d:\PythonProjects\RollCallPy\main.py", line 13, in <module>
+    from routes import init_routes
+  File "d:\PythonProjects\RollCallPy\routes.py", line 2, in <module>
+    from flask_limiter import Limiter
+ModuleNotFoundError: No module named 'flask_limiter'
+
+2025-04-12 11:10:42,619 - INFO - 已尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 11:17:56,721 - INFO - ==================================================
+2025-04-12 11:17:56,722 - INFO - 班级点名器启动
+2025-04-12 11:17:56,722 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:17:56,722 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 11:17:56,723 - INFO - 系统平台: win32
+2025-04-12 11:17:56,723 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'c:\\Program Files\\Python313\\python313.zip', 'c:\\Program Files\\Python313\\DLLs', 'c:\\Program Files\\Python313\\Lib', 'c:\\Program Files\\Python313', 'c:\\Program Files\\Python313\\Lib\\site-packages', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'c:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'c:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 11:17:56,723 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:17:56,723 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 11:17:58,743 - INFO - 使用端口: 5000
+2025-04-12 11:17:58,745 - INFO - 正在导入主应用...
+2025-04-12 11:17:58,746 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 11:17:58,746 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:17:58,746 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:17:58,747 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:17:58,747 - INFO - 执行main.py内容... (文件大小: 2128)
+2025-04-12 11:17:59,466 - INFO - ============================== 环境检查 ==============================
+2025-04-12 11:17:59,467 - INFO - 当前工作目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:17:59,467 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:17:59,467 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:17:59,468 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:17:59,468 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:17:59,469 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:17:59,469 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:17:59,470 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:17:59,470 - INFO - Flask应用将使用端口: 5000
+2025-04-12 11:17:59,502 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 11:17:59,502 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:18:01,314 - INFO - 已尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 11:18:01,387 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:01] "[32mGET / HTTP/1.1[0m" 302 -
+2025-04-12 11:18:01,415 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:01] code 400, message Bad request version ("Ü\x81¨NÆ³Yx.\x1a2pev6mxL\x87`RD'\x82\x15SR·ê\x9b\x10d\x8dè\x83h\x86²/Õ\x14\x82û¢z×\x08Lå\x18¤ü\x08d¨A$\x14Q¦Z{O\x1bc")
+2025-04-12 11:18:01,416 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:01] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03\x00Æ\x04ÑBn9áP\x0cÎä\x91©Î\x1aá\x85ë¥\x05\x90\x82G.\x1e\x8eß³wD\x90 \x12»Péf\x1cl\x08ö¡ÊÉ\x85'çûSí\x83Æ\x90Þ¢jê3\x03^\x7fI\x1fÿ\x00 **\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93::\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04í\x1a\x1a\x00\x01\x00\x11ì\x04À³¥N]·\x819F\x0e!(Ìð\x99\x99í"}vå~øû\x0e\x05¡NK§¶\x94¶1äZ\x8cò\x00eïpÎ\x99Ü t\x1a³Àö0\x1b¹{v\x16ª\x94#h®©#É¥"zÔÀ`\x97BYY5/ã\x86\x14Ä«\x90Ê\x9a\x98\x19¸´ôµüS»\x0c\x9bU;Ic×\x14³\x85ZV¥\x8bÄ\x00ª¢x×°É)saú\x8dyÚ³û\x9b\x1b{F^"Ç«\x8cFmÒÅ¼}Ueö\x9a\x0e:\x1bµ \x1bO\x96\x9cUÜk\x03,J!ö|\x0fÖ¸S\x88±­Ç\x13Å\x82k\x8ciì1cü\x1cÜ\x81¨NÆ³Yx.\x1a2pev6mxL\x87`RD'\x82\x15SR·ê\x9b\x10d\x8dè\x83h\x86²/Õ\x14\x82û¢z×\x08Lå\x18¤ü\x08d¨A$\x14Q¦Z{O\x1bc[0m" 400 -
+2025-04-12 11:18:01,419 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:01] code 400, message Bad request version ('ZZ\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sjj\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00')
+2025-04-12 11:18:01,419 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:01] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03Ð2ú\x0d\x9bÎÐí\x9f³\x94Gº\x9fãß1$ñ£oÀ1\x07ü\x9f\x109õ*ói bþ÷`Ñ1_~\x1f^òå\x9bÅ\x0e@ôM7Ëx\x03Á»\x93CþD\x16\x0f\x0fÖ\x00 ZZ\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sjj\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00[0m" 400 -
+2025-04-12 11:18:01,992 - INFO - 尝试打开浏览器: http://127.0.0.1:5000/
+2025-04-12 11:18:02,049 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:02] "[32mGET / HTTP/1.1[0m" 302 -
+2025-04-12 11:18:02,072 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:02] code 400, message Bad request version ('"Huö\x08ÅÍ]')
+2025-04-12 11:18:02,072 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:02] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03Î\x11©[\x14o\x01\x839>zd&2>d\x85bF%jéê~¡è·2w,;Ö ¬<\x18£\x0bê:\x03õ§¨³\x03tæ1\x8d¹ s\x8f\x1eÀV+ÍIzåe\x92\x8e\x00 **\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06súú\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00þ\x0d\x00ú\x00\x00\x01\x00\x03Ý\x00 NØ(Ý\\\x15¹v²\x99\x93²\x07Ý\x897\x99I\x85´¨\x1dnQtââ|68\x09)\x00Ð|\x03²\x11®0]ob\x0f '\x06>àXÈN½c\x15_\x8eâe\x0d\x1d câqÆ¢dÐ³}@\x056pÞ1\x7f.åÎ%?\x180\x14~\x1f¢óÚåÃMÏÜ\x9b\x7f\x8b\x9e.f\x7f\x9bJôÖ\x04§]?¼\x00¥\x005\x979¿PõºË\x8f;¡\x0e"|zÍ\x0e\x07\x88\x8cq¯±\x0dJ\x1f\x89\x9cHþÚ78É\x12Ï \x04Ó§>\x89õxÎô\x90\x8eS"[2£\x83ôw\x09ðð\x92\x97À\x1cmN\x85Dmãsù\x96\x8b4\x82ze\x82J \x09"Huö\x08ÅÍ][0m" 400 -
+2025-04-12 11:18:02,074 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:02] code 400, message Bad request version ('XðT\x9d»Ø¡>è')
+2025-04-12 11:18:02,075 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:02] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03æ\x12s:c\x8e\x83_Ãëò\x86¿Ç6>÷kE¡yC\x9fo££\x8clYU¡« \x09\x0d\x96F¤\x05z×ÌwW6L6I\x10'O"{õû\x7f»é\x1bª\x03Ù(I\x9b\x00 JJ\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93ªª\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x003\x04ï\x04íúú\x00\x01\x00\x11ì\x04À/h1\x8fj\x9fÄÖ¯7×yÒ\x9b\x08\x96\x07\x11å\x0caÁ\x99\x9eI²a¯Ô¥\x12âl]û0\x1aÙ\x94\x94«\x9fj1\x00ab\x89\x8dÆ\x84;u\x19é°8{\x82Xu|º½S¾ª#Ì3z,\x8c\x09ÎpE)Ù²\x99ÈÚ¢\x80²\x1ew6§´7\x05ç\x93«Å\x86db{R LÎV*d\x99ú\x82»\x96£z»Xå<z\x84\x11¾ öVþ'¾\x93\x0c+Z\x00\x1báø\x0f*äM-,\x86V%zY&nMºW\x19K\x0eAÉ\x84GÔºÁ¤q\x0e:n\x07¡2±V9H8*Ô\x09!Ø\x87\x1bDÌqGë// »ÞèÀ\x96Ð7.\x05º­\x85!\x924\\ú¸\x9b¡ô©PHÉÇ+\x06Å7¹\x83Û;\x8f¼\x9c²º Î\x1c\x828i\x98W XðT\x9d»Ø¡>è[0m" 400 -
+2025-04-12 11:18:03,491 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:03] code 400, message Bad request version ('::\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00\x00+\x00\x07\x06')
+2025-04-12 11:18:03,492 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:03] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03C»bq$&[\x80?³sË¿\x85\x87}\x8c\x14A\x15Ç\x91oÓá\x9eivïN\x09Ð À\\¶bDäÛ÷0_m5y\x14èn\x9a{Ô0\x9aï\x92ÃNÝ\x87LØ¢FO\x00 ::\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063::\x00\x00\x00+\x00\x07\x06[0m" 400 -
+2025-04-12 11:18:03,493 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:03] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00')
+2025-04-12 11:18:03,494 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:03] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03e\x14±Æh\x17óê\x05õ\x19w\x0cãVU\x85Ø¿ïc,2^\x8aXHê\x1cgpa ´s8\x8ds.§æ\x0d\x8a\x04Kíõ\x91\x13*m\x9cø\x0flòñ{¯Ï\x1a¬Ë\x1f_\x00 ZZ\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06s\x9a\x9a\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x12\x00\x00\x00[0m" 400 -
+2025-04-12 11:18:03,495 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:03] code 400, message Bad request version ('\x16Â')
+2025-04-12 11:18:03,496 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:03] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03?\x05Ta\x86]C\x8cnëm\x93ãì÷\x1dz_x¡\x1d¼\x94R­Nûò)Vbµ õ½(\x1d\x9a¨\x97È<ß,·aÐÏ³zOhy58\x13{£\x93f\x15\x17Hõe\x00 êê\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06S\x9a\x9a\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01ÿ\x01\x00\x01\x00DÍ\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x17\x00\x00\x00#\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x003\x04ï\x04íJJ\x00\x01\x00\x11ì\x04À«b&Áó\x0chg\x9au3há§\x92â\x81*qâxo´\x03æ\x090=\x02"í¬\x94ç \x16Â[0m" 400 -
+2025-04-12 11:18:03,497 - ERROR - 127.0.0.1 - - [12/Apr/2025 11:18:03] code 400, message Bad request version ('\x00\x02\x01\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00\x17\x00\x00\x00')
+2025-04-12 11:18:03,498 - INFO - 127.0.0.1 - - [12/Apr/2025 11:18:03] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03Y\x7fÅöm\x1e\x8b\\ûò2Cs¦\x88Í\x83>¨~Áx\x05?Î\x06§Ë\x9dÕY\x13 D\x9fÉWÓLj<ï¸¶NjªÃ$\x1c\x1aÄÀ\x99É[£\x1b}\x8bîm\x97k0\x00 JJ\x13\x03\x13\x01\x13\x02Ì©Ì¨À+À/À,À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00\x1b\x00\x03\x02\x00\x02þ\x0d\x01\x1a\x00\x00\x01\x00\x03ä\x00 \x8a\x81³tÀb'¸Ì&\x11\x13ùnÜÞ2C/Ó9»&\x11Éo\x17\x9b\x09\x82Î>\x00ðH\x0e\x87\x13\x09'Z3\\1P\x8eDV¿\x84Þ£Ö\x8bf.-òÊÂ/\x1bd\x16Þ3\x7f\x800';+\x05pM\x0czÍ¢\x14\x02ôÌ\x8fñ\x8c\x87òy8Z:\x14\x12Q=½²c[¨\x82\x00aZw\x01\x02äëw`$µ\x88$¢Ê½wÚ4jf\x85\x13\x98Î\x94Í×²iç\x1d´\\W7ùSNAôb+ÜñØ\x03\x1cûçl~Ôw\x1eV\x9aà¡\x0ew~ÿ\x80\x09¶8]µ!®EJ©£Ô£\x8c\x07¶±O\x80é"1å>\x16\x9e:Íuu&B­?÷_N\x13§så+\x02î\x0c\x19ª1âTº'ô\x94\x99ËÏf \x93.\x16\x1c F© jÃl¢\x09%vÃì'0qÃ:¼ð¨\x82ðláLù\x94Ô(wy~\x8bOÒ3Ru\x9f9¼=\x8c\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01DÍ\x00\x05\x00\x03\x02h2\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00#\x00\x00\x00\x0b\x00\x02\x01\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00\x17\x00\x00\x00[0m" 400 -
+2025-04-12 11:20:10,554 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 11:20:10,565 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 11:20:10,565 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:20:10,565 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:20:10,565 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:20:10,565 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:20:10,566 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:20:10,566 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:20:10,566 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:20:10,566 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:20:10,567 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 11:20:10,567 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 11:20:10,597 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 11:20:10,597 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:20:26,811 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 11:20:26,825 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 11:20:26,825 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:20:26,826 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:20:26,826 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:20:26,826 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:20:26,827 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:20:26,827 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:20:26,828 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:20:26,828 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:20:26,829 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 11:20:26,829 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 11:20:26,858 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 11:20:26,858 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:20:36,388 - INFO - ==================================================
+2025-04-12 11:20:36,389 - INFO - 班级点名器启动
+2025-04-12 11:20:36,389 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 11:20:36,389 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 11:20:36,389 - INFO - 系统平台: win32
+2025-04-12 11:20:36,389 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'C:\\Program Files\\Python313\\python313.zip', 'C:\\Program Files\\Python313\\DLLs', 'C:\\Program Files\\Python313\\Lib', 'C:\\Program Files\\Python313', 'C:\\Program Files\\Python313\\Lib\\site-packages', 'C:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'C:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'C:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 11:20:36,390 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:20:36,390 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 11:20:38,407 - INFO - 使用端口: 5001
+2025-04-12 11:20:38,408 - INFO - 正在导入主应用...
+2025-04-12 11:20:38,409 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 11:20:38,409 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:20:38,409 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:20:38,409 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 11:20:38,410 - INFO - 执行main.py内容... (文件大小: 8056)
+2025-04-12 11:20:38,654 - INFO - Flask 应用将使用端口: 5001
+2025-04-12 11:20:38,660 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 11:20:38,660 - INFO - 当前工作目录: d:\PythonProjects\RollCallPy
+2025-04-12 11:20:38,660 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 11:20:38,661 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 11:20:38,661 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 11:20:38,661 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 11:20:38,662 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 11:20:38,662 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 11:20:38,662 - INFO - 模板文件列表: ['index.html']
+2025-04-12 11:20:38,662 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 11:20:38,663 - INFO - Flask应用即将在端口 5001 上启动
+2025-04-12 11:20:38,682 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-04-12 11:20:38,682 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 11:20:40,968 - INFO - 已尝试打开浏览器: http://127.0.0.1:5001
+2025-04-12 11:20:41,113 - INFO - 访问首页
+2025-04-12 11:20:41,130 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:41] "GET / HTTP/1.1" 200 -
+2025-04-12 11:20:41,268 - INFO - 获取学生列表: 48个
+2025-04-12 11:20:41,269 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:41] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 11:20:41,439 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:41] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 11:20:41,439 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:41] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 11:20:41,440 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:41] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 11:20:41,775 - WARNING - 404错误: /favicon.ico
+2025-04-12 11:20:41,776 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-12 11:20:49,929 - INFO - 随机选择学生: 潘灵杰
+2025-04-12 11:20:49,930 - INFO - 127.0.0.1 - - [12/Apr/2025 11:20:49] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 11:21:05,813 - INFO - 随机选择学生: 林涵
+2025-04-12 11:21:05,814 - INFO - 127.0.0.1 - - [12/Apr/2025 11:21:05] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 11:34:29,344 - INFO - 主应用执行完成
+2025-04-12 11:34:29,345 - INFO - 应用已启动，请在浏览器中使用...
+2025-04-12 11:34:29,346 - INFO - 程序正在运行中，按Ctrl+C可以退出...
+2025-04-12 11:34:30,771 - INFO - 用户中断，程序退出
+2025-04-12 12:00:34,033 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:00:34,037 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:00:34,037 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:00:34,037 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:00:34,037 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:00:34,038 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:00:34,038 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:00:34,038 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:00:34,038 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:00:34,038 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:00:34,038 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 12:00:34,038 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:00:34,074 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:00:34,075 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:00:41,158 - INFO - ==================================================
+2025-04-12 12:00:41,158 - INFO - 班级点名器启动
+2025-04-12 12:00:41,158 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:00:41,158 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 12:00:41,158 - INFO - 系统平台: win32
+2025-04-12 12:00:41,159 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'C:\\Program Files\\Python313\\python313.zip', 'C:\\Program Files\\Python313\\DLLs', 'C:\\Program Files\\Python313\\Lib', 'C:\\Program Files\\Python313', 'C:\\Program Files\\Python313\\Lib\\site-packages', 'C:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'C:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'C:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 12:00:41,159 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 12:00:41,159 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 12:00:43,193 - INFO - 使用端口: 5000
+2025-04-12 12:00:43,196 - INFO - 正在导入主应用...
+2025-04-12 12:00:43,196 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 12:00:43,196 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 12:00:43,197 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 12:00:43,197 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 12:00:43,197 - INFO - 执行main.py内容... (文件大小: 8056)
+2025-04-12 12:00:43,423 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:00:43,426 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:00:43,427 - INFO - 当前工作目录: d:\PythonProjects\RollCallPy
+2025-04-12 12:00:43,427 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:00:43,427 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:00:43,427 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:00:43,428 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:00:43,428 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:00:43,428 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:00:43,428 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:00:43,429 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 12:00:43,429 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:00:43,444 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:00:43,444 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:00:45,785 - INFO - 已尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 12:00:45,875 - INFO - 访问首页
+2025-04-12 12:00:45,889 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:45] "GET / HTTP/1.1" 200 -
+2025-04-12 12:00:46,041 - INFO - 获取学生列表: 48个
+2025-04-12 12:00:46,042 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:46] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:00:46,503 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:46] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:00:46,505 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:46] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:00:46,506 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:46] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:00:47,109 - WARNING - 404错误: /favicon.ico
+2025-04-12 12:00:47,109 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-12 12:00:52,116 - INFO - 随机选择学生: 周禹
+2025-04-12 12:00:52,117 - INFO - 127.0.0.1 - - [12/Apr/2025 12:00:52] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:01:02,635 - INFO - 访问首页
+2025-04-12 12:01:02,637 - INFO - 127.0.0.1 - - [12/Apr/2025 12:01:02] "GET / HTTP/1.1" 200 -
+2025-04-12 12:01:02,757 - INFO - 获取学生列表: 48个
+2025-04-12 12:01:02,758 - INFO - 127.0.0.1 - - [12/Apr/2025 12:01:02] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:01:08,619 - INFO - 随机选择学生: 袁喜乐
+2025-04-12 12:01:08,620 - INFO - 127.0.0.1 - - [12/Apr/2025 12:01:08] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:01:31,105 - INFO - 主应用执行完成
+2025-04-12 12:01:31,105 - INFO - 应用已启动，请在浏览器中使用...
+2025-04-12 12:01:31,106 - INFO - 程序正在运行中，按Ctrl+C可以退出...
+2025-04-12 12:01:32,400 - INFO - 用户中断，程序退出
+2025-04-12 12:04:16,800 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:04:16,804 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:04:16,804 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:04:16,804 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:04:16,804 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:04:16,804 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:04:16,804 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:04:16,804 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:04:16,804 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:04:16,805 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:04:16,805 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 12:04:16,805 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:04:16,831 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:04:16,831 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:04:27,607 - INFO - 访问首页
+2025-04-12 12:04:27,621 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:27] "GET / HTTP/1.1" 200 -
+2025-04-12 12:04:27,740 - INFO - 获取学生列表: 48个
+2025-04-12 12:04:27,741 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:27] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:04:27,876 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:27] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:04:27,877 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:27] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:04:27,878 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:27] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:04:28,348 - WARNING - 404错误: /favicon.ico
+2025-04-12 12:04:28,349 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-12 12:04:33,634 - INFO - 随机选择学生: 陈子怡
+2025-04-12 12:04:33,635 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:33] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:04:39,069 - INFO - 随机选择学生: 范之铭
+2025-04-12 12:04:39,069 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:39] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:04:48,053 - INFO - 随机选择学生: 王麒凯
+2025-04-12 12:04:48,054 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:48] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:04:53,053 - INFO - 随机选择学生: 林毅轩
+2025-04-12 12:04:53,054 - INFO - 127.0.0.1 - - [12/Apr/2025 12:04:53] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:05:07,187 - INFO - 随机选择学生: 周禹
+2025-04-12 12:05:07,188 - INFO - 127.0.0.1 - - [12/Apr/2025 12:05:07] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:05:14,207 - INFO - 随机选择学生: 林之航
+2025-04-12 12:05:14,208 - INFO - 127.0.0.1 - - [12/Apr/2025 12:05:14] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:11:05,287 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:11:05,291 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:11:05,291 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:11:05,292 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:11:05,292 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:11:05,292 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:11:05,292 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:11:05,292 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:11:05,293 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:11:05,293 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:11:05,293 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 12:11:05,293 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:11:05,315 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:11:05,315 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:11:10,978 - INFO - 访问首页
+2025-04-12 12:11:10,991 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:10] "GET / HTTP/1.1" 200 -
+2025-04-12 12:11:11,118 - INFO - 获取学生列表: 48个
+2025-04-12 12:11:11,119 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:11] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:11:11,256 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:11] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:11:11,258 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:11] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:11:11,258 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:11] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:11:11,736 - WARNING - 404错误: /favicon.ico
+2025-04-12 12:11:11,736 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-12 12:11:17,046 - INFO - 随机选择学生: 戴子伦
+2025-04-12 12:11:17,047 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:17] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:11:24,713 - INFO - 随机选择学生: 戴子伦
+2025-04-12 12:11:24,714 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:24] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:11:32,049 - INFO - 随机选择学生: 周禹
+2025-04-12 12:11:32,051 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:32] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:11:45,265 - INFO - 随机选择学生: 陈熙昂
+2025-04-12 12:11:45,266 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:45] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:11:50,900 - INFO - 随机选择学生: 夏振皓
+2025-04-12 12:11:50,900 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:50] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:11:57,517 - INFO - 随机选择学生: 陈思祈
+2025-04-12 12:11:57,518 - INFO - 127.0.0.1 - - [12/Apr/2025 12:11:57] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:12:03,201 - INFO - 随机选择学生: 江宇绩
+2025-04-12 12:12:03,202 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:03] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:12:09,101 - INFO - 随机选择学生: 陈科雨
+2025-04-12 12:12:09,101 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:09] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:12:15,203 - INFO - 随机选择学生: 林雨烽
+2025-04-12 12:12:15,204 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:15] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:12:21,034 - INFO - 随机选择学生: 胡钰程
+2025-04-12 12:12:21,035 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:21] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:12:27,140 - INFO - 访问首页
+2025-04-12 12:12:27,141 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:27] "GET / HTTP/1.1" 200 -
+2025-04-12 12:12:27,246 - INFO - 获取学生列表: 48个
+2025-04-12 12:12:27,247 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:27] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:12:27,248 - INFO - 127.0.0.1 - - [12/Apr/2025 12:12:27] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:15:30,495 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:15:30,499 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:15:30,499 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:15:30,499 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:15:30,500 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:15:30,500 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:15:30,500 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:15:30,501 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:15:30,501 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:15:30,501 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:15:30,501 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 12:15:30,502 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:15:30,526 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:15:30,526 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:15:35,417 - WARNING - 404错误: /greet
+2025-04-12 12:15:35,418 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:35] "[33mGET /greet HTTP/1.1[0m" 404 -
+2025-04-12 12:15:35,908 - WARNING - 404错误: /favicon.ico
+2025-04-12 12:15:35,909 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-12 12:15:38,172 - INFO - 访问首页
+2025-04-12 12:15:38,183 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:38] "GET / HTTP/1.1" 200 -
+2025-04-12 12:15:38,228 - INFO - 获取学生列表: 48个
+2025-04-12 12:15:38,228 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:38] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:15:38,338 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:38] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:15:38,341 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:38] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:15:38,342 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:38] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:15:43,665 - INFO - 随机选择学生: 李嘉毅
+2025-04-12 12:15:43,666 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:43] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:15:50,982 - INFO - 随机选择学生: 林静怡
+2025-04-12 12:15:50,983 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:50] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:15:59,303 - INFO - 随机选择学生: 胡钰程
+2025-04-12 12:15:59,304 - INFO - 127.0.0.1 - - [12/Apr/2025 12:15:59] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:16:09,951 - INFO - 随机选择学生: 昊辰昱
+2025-04-12 12:16:09,952 - INFO - 127.0.0.1 - - [12/Apr/2025 12:16:09] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:20:37,905 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:20:37,908 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:20:37,908 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:20:37,909 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:20:37,909 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:20:37,909 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:20:37,909 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:20:37,910 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:20:37,910 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:20:37,910 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:20:37,911 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 12:20:37,911 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:20:37,935 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:20:37,935 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:20:40,966 - INFO - 访问首页
+2025-04-12 12:20:40,977 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:40] "GET / HTTP/1.1" 200 -
+2025-04-12 12:20:41,105 - INFO - 获取学生列表: 48个
+2025-04-12 12:20:41,106 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:41] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:20:41,200 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:41] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:20:41,215 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:41] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:20:41,216 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:41] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:20:46,222 - INFO - 随机选择学生: 陈思祈
+2025-04-12 12:20:46,222 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:46] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:20:55,505 - INFO - 随机选择学生: 郑一航
+2025-04-12 12:20:55,506 - INFO - 127.0.0.1 - - [12/Apr/2025 12:20:55] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:21:01,354 - INFO - 随机选择学生: 庄迦勒
+2025-04-12 12:21:01,355 - INFO - 127.0.0.1 - - [12/Apr/2025 12:21:01] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:21:08,326 - INFO - 随机选择学生: 柯泽楷
+2025-04-12 12:21:08,327 - INFO - 127.0.0.1 - - [12/Apr/2025 12:21:08] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:21:14,090 - INFO - 随机选择学生: 李嘉毅
+2025-04-12 12:21:14,091 - INFO - 127.0.0.1 - - [12/Apr/2025 12:21:14] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:21:19,923 - INFO - 随机选择学生: 蒋易凌
+2025-04-12 12:21:19,924 - INFO - 127.0.0.1 - - [12/Apr/2025 12:21:19] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:21:28,926 - INFO - 随机选择学生: 林之航
+2025-04-12 12:21:28,927 - INFO - 127.0.0.1 - - [12/Apr/2025 12:21:28] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:25:08,036 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:25:08,039 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:25:08,040 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:25:08,040 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:25:08,040 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:25:08,040 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:25:08,040 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:25:08,040 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:25:08,040 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:25:08,041 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:25:08,041 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-12 12:25:08,041 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:25:08,063 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:25:08,064 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:25:31,154 - INFO - ==================================================
+2025-04-12 12:25:31,154 - INFO - 班级点名器启动
+2025-04-12 12:25:31,155 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:25:31,155 - INFO - Python版本: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+2025-04-12 12:25:31,155 - INFO - 系统平台: win32
+2025-04-12 12:25:31,155 - INFO - Python搜索路径: ['d:\\PythonProjects\\RollCallPy', 'C:\\Program Files\\Python313\\python313.zip', 'C:\\Program Files\\Python313\\DLLs', 'C:\\Program Files\\Python313\\Lib', 'C:\\Program Files\\Python313', 'C:\\Program Files\\Python313\\Lib\\site-packages', 'C:\\Program Files\\Python313\\Lib\\site-packages\\win32', 'C:\\Program Files\\Python313\\Lib\\site-packages\\win32\\lib', 'C:\\Program Files\\Python313\\Lib\\site-packages\\Pythonwin']
+2025-04-12 12:25:31,156 - INFO - 脚本目录: d:\PythonProjects\RollCallPy
+2025-04-12 12:25:31,156 - INFO - 切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 12:25:33,188 - INFO - 使用端口: 5000
+2025-04-12 12:25:33,189 - INFO - 正在导入主应用...
+2025-04-12 12:25:33,190 - INFO - 使用当前目录作为基础路径: d:\PythonProjects\RollCallPy
+2025-04-12 12:25:33,190 - INFO - 资源路径: main.py -> d:\PythonProjects\RollCallPy\main.py
+2025-04-12 12:25:33,190 - INFO - 找到有效的main.py文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 12:25:33,190 - INFO - 尝试加载主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 12:25:33,191 - INFO - 执行main.py内容... (文件大小: 8056)
+2025-04-12 12:25:33,453 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:25:33,457 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:25:33,457 - INFO - 当前工作目录: d:\PythonProjects\RollCallPy
+2025-04-12 12:25:33,457 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:25:33,458 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:25:33,458 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:25:33,459 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:25:33,459 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:25:33,459 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:25:33,460 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:25:33,460 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 12:25:33,460 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:25:33,482 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:25:33,482 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:25:35,756 - INFO - 已尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 12:25:35,832 - INFO - 访问首页
+2025-04-12 12:25:35,852 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:35] "GET / HTTP/1.1" 200 -
+2025-04-12 12:25:35,979 - INFO - 获取学生列表: 48个
+2025-04-12 12:25:35,980 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:35] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:25:36,197 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:36] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:25:36,204 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:36] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:25:36,205 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:36] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:25:41,223 - INFO - 随机选择学生: 江伊静
+2025-04-12 12:25:41,223 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:41] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:25:50,474 - INFO - 随机选择学生: 章珈铭
+2025-04-12 12:25:50,475 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:50] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:25:56,642 - INFO - 随机选择学生: 胡钰程
+2025-04-12 12:25:56,643 - INFO - 127.0.0.1 - - [12/Apr/2025 12:25:56] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:30:33,347 - INFO - 主应用执行完成
+2025-04-12 12:30:33,347 - INFO - 应用已启动，请在浏览器中使用...
+2025-04-12 12:30:33,348 - INFO - 程序正在运行中，按Ctrl+C可以退出...
+2025-04-12 12:30:34,526 - INFO - 用户中断，程序退出
+2025-04-12 12:30:38,294 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:30:38,297 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:30:38,298 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:30:38,298 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:30:38,298 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:30:38,298 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:30:38,298 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:30:38,299 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:30:38,299 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:30:38,300 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:30:38,300 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 12:30:38,300 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:30:38,323 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:30:38,324 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:30:42,308 - INFO - 访问首页
+2025-04-12 12:30:42,324 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:42] "GET / HTTP/1.1" 200 -
+2025-04-12 12:30:42,411 - INFO - 获取学生列表: 48个
+2025-04-12 12:30:42,412 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:42] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:30:42,498 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:42] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:30:42,500 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:42] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:30:42,501 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:42] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:30:47,430 - INFO - 随机选择学生: 柯泽楷
+2025-04-12 12:30:47,431 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:30:53,498 - INFO - 随机选择学生: 郑一航
+2025-04-12 12:30:53,498 - INFO - 127.0.0.1 - - [12/Apr/2025 12:30:53] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:31:00,982 - INFO - 随机选择学生: 昊辰昱
+2025-04-12 12:31:00,983 - INFO - 127.0.0.1 - - [12/Apr/2025 12:31:00] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:35:27,566 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:35:27,570 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:35:27,570 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:35:27,570 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:35:27,570 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:35:27,570 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:35:27,570 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:35:27,570 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:35:27,570 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:35:27,571 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:35:27,571 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 12:35:27,571 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:35:27,593 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:35:27,593 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:35:34,080 - INFO - 访问首页
+2025-04-12 12:35:34,096 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:34] "GET / HTTP/1.1" 200 -
+2025-04-12 12:35:34,187 - INFO - 获取学生列表: 48个
+2025-04-12 12:35:34,189 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:34] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:35:34,265 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:34] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:35:34,270 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:34] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:35:34,270 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:34] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:35:38,701 - INFO - 随机选择学生: 胡钰程
+2025-04-12 12:35:38,702 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:38] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:35:44,850 - INFO - 随机选择学生: 袁喜乐
+2025-04-12 12:35:44,851 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:44] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:35:46,726 - INFO - 访问首页
+2025-04-12 12:35:46,732 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:46] "GET / HTTP/1.1" 200 -
+2025-04-12 12:35:46,839 - INFO - 获取学生列表: 48个
+2025-04-12 12:35:46,841 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:46] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:35:46,842 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:46] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:35:46,845 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:46] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:35:46,848 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:46] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:35:51,135 - INFO - 随机选择学生: 连攀棋
+2025-04-12 12:35:51,136 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:51] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:35:56,718 - INFO - 随机选择学生: 章珈铭
+2025-04-12 12:35:56,719 - INFO - 127.0.0.1 - - [12/Apr/2025 12:35:56] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:36:02,253 - INFO - 随机选择学生: 蔡承书
+2025-04-12 12:36:02,255 - INFO - 127.0.0.1 - - [12/Apr/2025 12:36:02] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:55:08,620 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:55:08,623 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:55:08,624 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:55:08,624 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:55:08,624 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:55:08,624 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:55:08,624 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:55:08,624 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:55:08,624 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:55:08,625 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:55:08,625 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 12:55:08,627 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:55:08,649 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:55:08,649 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:55:13,315 - INFO - 访问首页
+2025-04-12 12:55:13,330 - INFO - 127.0.0.1 - - [12/Apr/2025 12:55:13] "GET / HTTP/1.1" 200 -
+2025-04-12 12:55:13,438 - INFO - 获取学生列表: 48个
+2025-04-12 12:55:13,438 - INFO - 127.0.0.1 - - [12/Apr/2025 12:55:13] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:55:13,570 - INFO - 127.0.0.1 - - [12/Apr/2025 12:55:13] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:55:13,571 - INFO - 127.0.0.1 - - [12/Apr/2025 12:55:13] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:55:13,573 - INFO - 127.0.0.1 - - [12/Apr/2025 12:55:13] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:55:17,983 - INFO - 随机选择学生: 郑铁文
+2025-04-12 12:55:17,983 - INFO - 127.0.0.1 - - [12/Apr/2025 12:55:17] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:57:16,153 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 12:57:16,157 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 12:57:16,157 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 12:57:16,157 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 12:57:16,157 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 12:57:16,157 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 12:57:16,158 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 12:57:16,158 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 12:57:16,158 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 12:57:16,158 - INFO - 模板文件列表: ['index.html']
+2025-04-12 12:57:16,158 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 12:57:16,158 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 12:57:16,179 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 12:57:16,180 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 12:57:19,530 - INFO - 访问首页
+2025-04-12 12:57:19,544 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:19] "GET / HTTP/1.1" 200 -
+2025-04-12 12:57:19,638 - INFO - 获取学生列表: 48个
+2025-04-12 12:57:19,638 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:19] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 12:57:19,723 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:19] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:57:19,725 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:19] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:57:19,725 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:19] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 12:57:24,094 - INFO - 随机选择学生: 陈科雨
+2025-04-12 12:57:24,094 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:24] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 12:57:29,829 - INFO - 随机选择学生: 蔡依衡
+2025-04-12 12:57:29,829 - INFO - 127.0.0.1 - - [12/Apr/2025 12:57:29] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:00:23,809 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:00:23,812 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:00:23,812 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:00:23,812 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:00:23,813 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:00:23,813 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:00:23,813 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:00:23,813 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:00:23,813 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:00:23,813 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:00:23,813 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 13:00:23,813 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:00:23,835 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:00:23,835 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:00:36,275 - INFO - 访问首页
+2025-04-12 13:00:36,291 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:36] "GET / HTTP/1.1" 200 -
+2025-04-12 13:00:36,376 - INFO - 获取学生列表: 48个
+2025-04-12 13:00:36,377 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:36] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:00:36,455 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:36] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:00:36,458 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:36] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:00:36,459 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:36] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:00:41,175 - INFO - 随机选择学生: 连羿皓
+2025-04-12 13:00:41,175 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:41] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:00:47,144 - INFO - 随机选择学生: 林哲煜
+2025-04-12 13:00:47,144 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:00:53,226 - INFO - 随机选择学生: 周禹
+2025-04-12 13:00:53,226 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:53] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:00:58,761 - INFO - 随机选择学生: 余潇悦
+2025-04-12 13:00:58,761 - INFO - 127.0.0.1 - - [12/Apr/2025 13:00:58] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:01:04,244 - INFO - 随机选择学生: 戴子伦
+2025-04-12 13:01:04,245 - INFO - 127.0.0.1 - - [12/Apr/2025 13:01:04] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:01:10,430 - INFO - 随机选择学生: 林之航
+2025-04-12 13:01:10,431 - INFO - 127.0.0.1 - - [12/Apr/2025 13:01:10] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:02:52,661 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:02:52,664 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:02:52,664 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:02:52,665 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:02:52,665 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:02:52,665 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:02:52,665 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:02:52,665 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:02:52,665 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:02:52,666 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:02:52,666 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:02:52,666 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:02:52,690 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:02:52,691 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:02:56,027 - INFO - 访问首页
+2025-04-12 13:02:56,050 - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:56] "GET / HTTP/1.1" 200 -
+2025-04-12 13:02:56,146 - INFO - 获取学生列表: 48个
+2025-04-12 13:02:56,147 - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:56] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:02:56,224 - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:56] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:02:56,229 - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:56] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:02:56,232 - INFO - 127.0.0.1 - - [12/Apr/2025 13:02:56] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:03:00,533 - INFO - 随机选择学生: 江籽蒙
+2025-04-12 13:03:00,534 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:00] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:03:06,136 - INFO - 随机选择学生: 张家铭
+2025-04-12 13:03:06,137 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:06] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:03:12,003 - INFO - 随机选择学生: 章珈铭
+2025-04-12 13:03:12,003 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:12] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:03:33,359 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:03:33,363 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:03:33,364 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:03:33,364 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:03:33,364 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:03:33,364 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:03:33,364 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:03:33,365 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:03:33,365 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:03:33,366 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:03:33,366 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-12 13:03:33,366 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:03:33,386 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:03:33,387 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:03:37,299 - INFO - 访问首页
+2025-04-12 13:03:37,314 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:37] "GET / HTTP/1.1" 200 -
+2025-04-12 13:03:37,390 - INFO - 获取学生列表: 48个
+2025-04-12 13:03:37,390 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:37] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:03:37,420 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:37] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:03:41,869 - INFO - 随机选择学生: 昊辰昱
+2025-04-12 13:03:41,869 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:41] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:03:47,722 - INFO - 随机选择学生: 戴子伦
+2025-04-12 13:03:47,722 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:03:53,221 - INFO - 随机选择学生: 李宁强
+2025-04-12 13:03:53,221 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:53] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:03:59,137 - INFO - 随机选择学生: 卢铃
+2025-04-12 13:03:59,138 - INFO - 127.0.0.1 - - [12/Apr/2025 13:03:59] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:04:04,821 - INFO - 随机选择学生: 李嘉毅
+2025-04-12 13:04:04,822 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:04] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:04:10,307 - INFO - 随机选择学生: 王忆
+2025-04-12 13:04:10,307 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:10] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:04:21,463 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:04:21,466 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:04:21,467 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:04:21,467 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:04:21,467 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:04:21,467 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:04:21,468 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:04:21,468 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:04:21,468 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:04:21,468 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:04:21,469 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:04:21,469 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:04:21,490 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:04:21,490 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:04:25,770 - INFO - 访问首页
+2025-04-12 13:04:25,786 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:25] "GET / HTTP/1.1" 200 -
+2025-04-12 13:04:25,875 - INFO - 获取学生列表: 48个
+2025-04-12 13:04:25,876 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:25] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:04:25,903 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:25] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:04:30,372 - INFO - 随机选择学生: 王忆
+2025-04-12 13:04:30,372 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:30] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:04:35,841 - INFO - 随机选择学生: 郑铁文
+2025-04-12 13:04:35,842 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:35] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:04:41,957 - INFO - 随机选择学生: 陈薇婷
+2025-04-12 13:04:41,957 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:41] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:04:47,575 - INFO - 随机选择学生: 李嘉毅
+2025-04-12 13:04:47,575 - INFO - 127.0.0.1 - - [12/Apr/2025 13:04:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:05:15,376 - INFO - 访问首页
+2025-04-12 13:05:15,377 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:15] "GET / HTTP/1.1" 200 -
+2025-04-12 13:05:15,462 - INFO - 获取学生列表: 48个
+2025-04-12 13:05:15,463 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:15] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:05:15,463 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:15] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:05:19,642 - INFO - 随机选择学生: 李宁强
+2025-04-12 13:05:19,643 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:19] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:05:28,402 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:05:28,405 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:05:28,406 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:05:28,406 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:05:28,406 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:05:28,406 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:05:28,407 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:05:28,407 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:05:28,407 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:05:28,408 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:05:28,408 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:05:28,408 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:05:28,430 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:05:28,431 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:05:32,551 - INFO - 访问首页
+2025-04-12 13:05:32,568 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:32] "GET / HTTP/1.1" 200 -
+2025-04-12 13:05:32,636 - INFO - 获取学生列表: 48个
+2025-04-12 13:05:32,639 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:32] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:05:36,827 - INFO - 随机选择学生: 王赞博
+2025-04-12 13:05:36,827 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:36] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:05:42,362 - INFO - 随机选择学生: 张家铭
+2025-04-12 13:05:42,363 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:42] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:05:47,947 - INFO - 随机选择学生: 胡钰程
+2025-04-12 13:05:47,947 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:05:53,563 - INFO - 随机选择学生: 卢铃
+2025-04-12 13:05:53,563 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:53] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:05:59,545 - INFO - 随机选择学生: 张家铭
+2025-04-12 13:05:59,546 - INFO - 127.0.0.1 - - [12/Apr/2025 13:05:59] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:06:07,345 - INFO - 随机选择学生: 林俊豪
+2025-04-12 13:06:07,346 - INFO - 127.0.0.1 - - [12/Apr/2025 13:06:07] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:06:18,379 - INFO - 随机选择学生: 袁喜乐
+2025-04-12 13:06:18,379 - INFO - 127.0.0.1 - - [12/Apr/2025 13:06:18] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:06:24,097 - INFO - 随机选择学生: 王麒凯
+2025-04-12 13:06:24,098 - INFO - 127.0.0.1 - - [12/Apr/2025 13:06:24] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:06:30,048 - INFO - 随机选择学生: 林涵
+2025-04-12 13:06:30,049 - INFO - 127.0.0.1 - - [12/Apr/2025 13:06:30] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:06:35,548 - INFO - 随机选择学生: 夏振皓
+2025-04-12 13:06:35,548 - INFO - 127.0.0.1 - - [12/Apr/2025 13:06:35] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:08:53,467 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:08:53,471 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:08:53,471 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:08:53,472 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:08:53,472 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:08:53,472 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:08:53,472 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:08:53,472 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:08:53,472 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:08:53,473 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:08:53,473 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 13:08:53,473 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:08:53,496 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:08:53,496 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:08:56,084 - INFO - 随机选择学生: 庄迦勒
+2025-04-12 13:08:56,086 - INFO - 127.0.0.1 - - [12/Apr/2025 13:08:56] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:08:57,363 - INFO - 访问首页
+2025-04-12 13:08:57,377 - INFO - 127.0.0.1 - - [12/Apr/2025 13:08:57] "GET / HTTP/1.1" 200 -
+2025-04-12 13:08:57,468 - INFO - 获取学生列表: 48个
+2025-04-12 13:08:57,470 - INFO - 127.0.0.1 - - [12/Apr/2025 13:08:57] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:08:57,538 - INFO - 127.0.0.1 - - [12/Apr/2025 13:08:57] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:08:57,540 - INFO - 127.0.0.1 - - [12/Apr/2025 13:08:57] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:09:02,611 - INFO - 随机选择学生: 林哲煜
+2025-04-12 13:09:02,612 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:02] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:09:08,429 - INFO - 随机选择学生: 陈思祈
+2025-04-12 13:09:08,429 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:08] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:09:25,283 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:09:25,287 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:09:25,288 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:09:25,288 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:09:25,288 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:09:25,288 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:09:25,289 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:09:25,289 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:09:25,289 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:09:25,290 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:09:25,290 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 13:09:25,290 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:09:25,313 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:09:25,314 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:09:28,519 - INFO - 访问首页
+2025-04-12 13:09:28,533 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:28] "GET / HTTP/1.1" 200 -
+2025-04-12 13:09:28,614 - INFO - 获取学生列表: 48个
+2025-04-12 13:09:28,615 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:28] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:09:28,684 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:28] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:09:28,686 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:28] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:09:28,687 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:28] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:09:33,294 - INFO - 随机选择学生: 王忆
+2025-04-12 13:09:33,295 - INFO - 127.0.0.1 - - [12/Apr/2025 13:09:33] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:10:04,124 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:10:04,127 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:10:04,128 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:10:04,128 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:10:04,128 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:10:04,128 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:10:04,128 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:10:04,128 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:10:04,129 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:10:04,129 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:10:04,129 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 13:10:04,129 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:10:04,152 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:10:04,152 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:10:06,373 - INFO - 访问首页
+2025-04-12 13:10:06,387 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:06] "GET / HTTP/1.1" 200 -
+2025-04-12 13:10:06,470 - INFO - 获取学生列表: 48个
+2025-04-12 13:10:06,471 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:06] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:10:06,544 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:06] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:10:06,548 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:06] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:10:06,549 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:06] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:10:10,646 - INFO - 随机选择学生: 王忆
+2025-04-12 13:10:10,646 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:10] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:10:24,214 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:10:24,218 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:10:24,218 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:10:24,218 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:10:24,219 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:10:24,219 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:10:24,219 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:10:24,220 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:10:24,220 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:10:24,220 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:10:24,221 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:10:24,221 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:10:24,244 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:10:24,244 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:10:29,965 - INFO - 随机选择学生: 林哲煜
+2025-04-12 13:10:29,966 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:29] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:10:41,857 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:10:41,861 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:10:41,861 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:10:41,862 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:10:41,862 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:10:41,862 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:10:41,862 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:10:41,862 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:10:41,862 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:10:41,863 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:10:41,863 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:10:41,863 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:10:41,889 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:10:41,889 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:10:43,657 - INFO - 访问首页
+2025-04-12 13:10:43,672 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:43] "GET / HTTP/1.1" 200 -
+2025-04-12 13:10:43,755 - INFO - 获取学生列表: 48个
+2025-04-12 13:10:43,756 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:43] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:10:43,831 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:43] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:10:43,832 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:43] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:10:43,832 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:43] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:10:47,916 - INFO - 随机选择学生: 柯泽楷
+2025-04-12 13:10:47,917 - INFO - 127.0.0.1 - - [12/Apr/2025 13:10:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:11:01,484 - INFO - 访问首页
+2025-04-12 13:11:01,485 - INFO - 127.0.0.1 - - [12/Apr/2025 13:11:01] "GET / HTTP/1.1" 200 -
+2025-04-12 13:11:01,561 - INFO - 获取学生列表: 48个
+2025-04-12 13:11:01,562 - INFO - 127.0.0.1 - - [12/Apr/2025 13:11:01] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:11:05,684 - INFO - 随机选择学生: 江伊静
+2025-04-12 13:11:05,684 - INFO - 127.0.0.1 - - [12/Apr/2025 13:11:05] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:12:16,596 - INFO - 访问首页
+2025-04-12 13:12:16,596 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:16] "GET / HTTP/1.1" 200 -
+2025-04-12 13:12:16,685 - INFO - 获取学生列表: 48个
+2025-04-12 13:12:16,686 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:16] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:12:16,691 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:16] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:12:16,692 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:16] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:12:16,693 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:16] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:12:20,888 - INFO - 随机选择学生: 陈科雨
+2025-04-12 13:12:20,889 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:20] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:12:43,031 - INFO - 访问首页
+2025-04-12 13:12:43,032 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:43] "GET / HTTP/1.1" 200 -
+2025-04-12 13:12:43,115 - INFO - 获取学生列表: 48个
+2025-04-12 13:12:43,116 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:43] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:12:47,223 - INFO - 随机选择学生: 王赞博
+2025-04-12 13:12:47,224 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:47] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:12:57,532 - INFO - 访问首页
+2025-04-12 13:12:57,533 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:57] "GET / HTTP/1.1" 200 -
+2025-04-12 13:12:57,614 - INFO - 获取学生列表: 48个
+2025-04-12 13:12:57,615 - INFO - 127.0.0.1 - - [12/Apr/2025 13:12:57] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:13:01,809 - INFO - 随机选择学生: 黄楠茜
+2025-04-12 13:13:01,809 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:01] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:13:17,033 - INFO - 访问首页
+2025-04-12 13:13:17,033 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:17] "GET / HTTP/1.1" 200 -
+2025-04-12 13:13:17,124 - INFO - 获取学生列表: 48个
+2025-04-12 13:13:17,125 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:17] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:13:21,525 - INFO - 随机选择学生: 蔡承书
+2025-04-12 13:13:21,527 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:21] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:13:30,868 - INFO - 访问首页
+2025-04-12 13:13:30,869 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:30] "GET / HTTP/1.1" 200 -
+2025-04-12 13:13:30,951 - INFO - 获取学生列表: 48个
+2025-04-12 13:13:30,952 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:30] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:13:35,228 - INFO - 随机选择学生: 夏振皓
+2025-04-12 13:13:35,228 - INFO - 127.0.0.1 - - [12/Apr/2025 13:13:35] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:14:14,998 - INFO - 随机选择学生: 张家铭
+2025-04-12 13:14:14,999 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:14] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:14:21,948 - INFO - 随机选择学生: 雍森森
+2025-04-12 13:14:21,949 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:21] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:14:27,617 - INFO - 随机选择学生: 连羿皓
+2025-04-12 13:14:27,618 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:27] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:14:47,342 - INFO - 访问首页
+2025-04-12 13:14:47,346 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:47] "GET / HTTP/1.1" 200 -
+2025-04-12 13:14:47,444 - INFO - 获取学生列表: 48个
+2025-04-12 13:14:47,446 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:47] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:14:47,447 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:47] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:14:47,448 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:47] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:14:47,450 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:47] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:14:51,950 - INFO - 随机选择学生: 余潇悦
+2025-04-12 13:14:51,951 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:51] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:14:57,617 - INFO - 随机选择学生: 余潇悦
+2025-04-12 13:14:57,618 - INFO - 127.0.0.1 - - [12/Apr/2025 13:14:57] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:15:03,384 - INFO - 随机选择学生: 雍森森
+2025-04-12 13:15:03,385 - INFO - 127.0.0.1 - - [12/Apr/2025 13:15:03] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:15:08,851 - INFO - 随机选择学生: 林雨烽
+2025-04-12 13:15:08,852 - INFO - 127.0.0.1 - - [12/Apr/2025 13:15:08] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:15:14,352 - INFO - 随机选择学生: 夏振皓
+2025-04-12 13:15:14,352 - INFO - 127.0.0.1 - - [12/Apr/2025 13:15:14] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:15:20,069 - INFO - 随机选择学生: 林俊豪
+2025-04-12 13:15:20,069 - INFO - 127.0.0.1 - - [12/Apr/2025 13:15:20] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:15:26,190 - INFO - 随机选择学生: 蒋易凌
+2025-04-12 13:15:26,192 - INFO - 127.0.0.1 - - [12/Apr/2025 13:15:26] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:15:31,702 - INFO - 随机选择学生: 林雨烽
+2025-04-12 13:15:31,703 - INFO - 127.0.0.1 - - [12/Apr/2025 13:15:31] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:18:27,197 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:18:27,200 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:18:27,201 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:18:27,201 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:18:27,201 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:18:27,202 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:18:27,202 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:18:27,202 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:18:27,202 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:18:27,203 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:18:27,203 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:18:27,203 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:18:27,224 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:18:27,224 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:18:30,530 - INFO - 访问首页
+2025-04-12 13:18:30,549 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:30] "GET / HTTP/1.1" 200 -
+2025-04-12 13:18:30,672 - INFO - 获取学生列表: 48个
+2025-04-12 13:18:30,673 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:30] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:18:30,788 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:30] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:18:30,790 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:30] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:18:30,793 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:30] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:18:35,068 - INFO - 随机选择学生: 胡钰程
+2025-04-12 13:18:35,068 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:35] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:18:40,568 - INFO - 随机选择学生: 储博伟
+2025-04-12 13:18:40,569 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:40] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:18:46,152 - INFO - 随机选择学生: 江宇绩
+2025-04-12 13:18:46,153 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:46] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:18:51,619 - INFO - 随机选择学生: 江籽蒙
+2025-04-12 13:18:51,620 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:51] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:18:57,205 - INFO - 随机选择学生: 周禹
+2025-04-12 13:18:57,206 - INFO - 127.0.0.1 - - [12/Apr/2025 13:18:57] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:19:02,688 - INFO - 随机选择学生: 昊辰昱
+2025-04-12 13:19:02,689 - INFO - 127.0.0.1 - - [12/Apr/2025 13:19:02] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:19:08,454 - INFO - 随机选择学生: 戴子伦
+2025-04-12 13:19:08,455 - INFO - 127.0.0.1 - - [12/Apr/2025 13:19:08] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:19:13,937 - INFO - 随机选择学生: 江籽蒙
+2025-04-12 13:19:13,938 - INFO - 127.0.0.1 - - [12/Apr/2025 13:19:13] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:19:19,703 - INFO - 随机选择学生: 江宇绩
+2025-04-12 13:19:19,704 - INFO - 127.0.0.1 - - [12/Apr/2025 13:19:19] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:20:08,937 - INFO - 访问首页
+2025-04-12 13:20:08,939 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:08] "GET / HTTP/1.1" 200 -
+2025-04-12 13:20:09,033 - INFO - 获取学生列表: 48个
+2025-04-12 13:20:09,035 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:09] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:20:09,037 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:09] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:20:09,039 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:09] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:20:09,040 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:09] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:20:13,525 - INFO - 随机选择学生: 王赞博
+2025-04-12 13:20:13,526 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:13] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:20:18,993 - INFO - 随机选择学生: 江宇绩
+2025-04-12 13:20:18,994 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:18] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:20:24,560 - INFO - 随机选择学生: 陈子怡
+2025-04-12 13:20:24,560 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:24] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:20:31,309 - INFO - 随机选择学生: 陈子怡
+2025-04-12 13:20:31,310 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:31] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:20:36,944 - INFO - 随机选择学生: 郑一航
+2025-04-12 13:20:36,945 - INFO - 127.0.0.1 - - [12/Apr/2025 13:20:36] "GET /api/random HTTP/1.1" 200 -
+2025-04-12 13:29:02,795 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:29:02,798 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:29:02,798 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:29:02,799 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:29:02,799 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:29:02,799 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:29:02,799 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:29:02,799 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:29:02,799 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:29:02,799 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:29:02,800 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 13:29:02,800 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:29:02,824 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:29:02,825 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:29:05,519 - INFO - 访问首页
+2025-04-12 13:29:05,540 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:05] "GET / HTTP/1.1" 200 -
+2025-04-12 13:29:05,634 - INFO - 获取学生列表: 48个
+2025-04-12 13:29:05,634 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:05] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:29:05,769 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:05] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:29:05,770 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:05] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:29:05,771 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:05] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:29:39,480 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:29:39,484 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:29:39,484 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:29:39,484 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:29:39,485 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:29:39,485 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:29:39,485 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:29:39,485 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:29:39,486 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:29:39,486 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:29:39,486 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:29:39,487 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:29:39,512 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:29:39,512 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:29:41,637 - INFO - 访问首页
+2025-04-12 13:29:41,651 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:41] "GET / HTTP/1.1" 200 -
+2025-04-12 13:29:41,731 - INFO - 获取学生列表: 48个
+2025-04-12 13:29:41,732 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:41] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:29:41,803 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:41] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:29:41,804 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:41] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:29:41,805 - INFO - 127.0.0.1 - - [12/Apr/2025 13:29:41] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:29:59,709 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:29:59,714 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:29:59,715 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:29:59,715 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:29:59,715 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:29:59,716 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:29:59,716 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:29:59,716 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:29:59,717 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:29:59,717 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:29:59,718 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:29:59,718 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:29:59,743 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:29:59,743 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:30:01,763 - INFO - 访问首页
+2025-04-12 13:30:01,778 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:01] "GET / HTTP/1.1" 200 -
+2025-04-12 13:30:01,862 - INFO - 获取学生列表: 48个
+2025-04-12 13:30:01,863 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:01] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:30:18,924 - INFO - 访问首页
+2025-04-12 13:30:18,925 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:18] "GET / HTTP/1.1" 200 -
+2025-04-12 13:30:19,003 - INFO - 获取学生列表: 48个
+2025-04-12 13:30:19,004 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:19] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:30:27,990 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:30:27,994 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:30:27,995 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:30:27,995 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:30:27,996 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:30:27,996 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:30:27,997 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:30:27,997 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:30:27,997 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:30:27,998 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:30:27,998 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:30:27,998 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:30:28,020 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:30:28,021 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:30:29,758 - INFO - 访问首页
+2025-04-12 13:30:29,772 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:29] "GET / HTTP/1.1" 200 -
+2025-04-12 13:30:29,854 - INFO - 获取学生列表: 48个
+2025-04-12 13:30:29,855 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:29] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:30:45,669 - INFO - 访问首页
+2025-04-12 13:30:45,670 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:45] "GET / HTTP/1.1" 200 -
+2025-04-12 13:30:45,748 - INFO - 获取学生列表: 48个
+2025-04-12 13:30:45,748 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:45] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:30:58,973 - INFO - 访问首页
+2025-04-12 13:30:58,974 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:58] "GET / HTTP/1.1" 200 -
+2025-04-12 13:30:59,058 - INFO - 获取学生列表: 48个
+2025-04-12 13:30:59,058 - INFO - 127.0.0.1 - - [12/Apr/2025 13:30:59] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:31:07,904 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:31:07,908 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:31:07,908 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:31:07,908 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:31:07,909 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:31:07,909 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:31:07,909 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:31:07,909 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:31:07,909 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:31:07,909 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:31:07,910 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:31:07,910 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:31:07,937 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:31:07,937 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:31:11,073 - INFO - 访问首页
+2025-04-12 13:31:11,089 - INFO - 127.0.0.1 - - [12/Apr/2025 13:31:11] "GET / HTTP/1.1" 200 -
+2025-04-12 13:31:11,172 - INFO - 获取学生列表: 48个
+2025-04-12 13:31:11,172 - INFO - 127.0.0.1 - - [12/Apr/2025 13:31:11] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:31:31,925 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:31:31,929 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:31:31,929 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:31:31,929 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:31:31,929 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:31:31,929 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:31:31,930 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:31:31,930 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:31:31,931 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:31:31,931 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:31:31,931 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:31:31,932 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:31:31,953 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:31:31,953 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:31:34,031 - INFO - 访问首页
+2025-04-12 13:31:34,046 - INFO - 127.0.0.1 - - [12/Apr/2025 13:31:34] "GET / HTTP/1.1" 200 -
+2025-04-12 13:31:34,132 - INFO - 获取学生列表: 48个
+2025-04-12 13:31:34,133 - INFO - 127.0.0.1 - - [12/Apr/2025 13:31:34] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:31:34,168 - INFO - 127.0.0.1 - - [12/Apr/2025 13:31:34] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:31:58,419 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:31:58,422 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:31:58,423 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:31:58,423 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:31:58,423 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:31:58,423 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:31:58,423 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:31:58,424 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:31:58,424 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:31:58,424 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:31:58,425 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:31:58,425 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:31:58,451 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:31:58,452 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:32:00,170 - INFO - 访问首页
+2025-04-12 13:32:00,183 - INFO - 127.0.0.1 - - [12/Apr/2025 13:32:00] "GET / HTTP/1.1" 200 -
+2025-04-12 13:32:00,263 - INFO - 获取学生列表: 48个
+2025-04-12 13:32:00,264 - INFO - 127.0.0.1 - - [12/Apr/2025 13:32:00] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:32:30,168 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:32:30,172 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:32:30,173 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:32:30,173 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:32:30,173 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:32:30,174 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:32:30,174 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:32:30,175 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:32:30,175 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:32:30,176 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:32:30,176 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 13:32:30,176 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:32:30,204 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:32:30,205 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:32:33,646 - INFO - 访问首页
+2025-04-12 13:32:33,660 - INFO - 127.0.0.1 - - [12/Apr/2025 13:32:33] "GET / HTTP/1.1" 200 -
+2025-04-12 13:32:33,744 - INFO - 获取学生列表: 48个
+2025-04-12 13:32:33,744 - INFO - 127.0.0.1 - - [12/Apr/2025 13:32:33] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:32:52,573 - INFO - 访问首页
+2025-04-12 13:32:52,575 - INFO - 127.0.0.1 - - [12/Apr/2025 13:32:52] "GET / HTTP/1.1" 200 -
+2025-04-12 13:32:52,647 - INFO - 获取学生列表: 48个
+2025-04-12 13:32:52,647 - INFO - 127.0.0.1 - - [12/Apr/2025 13:32:52] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:33:04,702 - INFO - 访问首页
+2025-04-12 13:33:04,703 - INFO - 127.0.0.1 - - [12/Apr/2025 13:33:04] "GET / HTTP/1.1" 200 -
+2025-04-12 13:33:04,783 - INFO - 获取学生列表: 48个
+2025-04-12 13:33:04,783 - INFO - 127.0.0.1 - - [12/Apr/2025 13:33:04] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:33:12,534 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:33:12,539 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:33:12,539 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:33:12,539 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:33:12,540 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:33:12,540 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:33:12,540 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:33:12,541 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:33:12,541 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:33:12,541 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:33:12,541 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:33:12,542 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:33:12,567 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:33:12,567 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:33:14,711 - INFO - 访问首页
+2025-04-12 13:33:14,726 - INFO - 127.0.0.1 - - [12/Apr/2025 13:33:14] "GET / HTTP/1.1" 200 -
+2025-04-12 13:33:14,795 - INFO - 获取学生列表: 48个
+2025-04-12 13:33:14,795 - INFO - 127.0.0.1 - - [12/Apr/2025 13:33:14] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:38:28,344 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:38:28,348 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:38:28,348 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:38:28,348 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:38:28,348 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:38:28,349 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:38:28,349 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:38:28,349 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:38:28,350 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:38:28,350 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:38:28,350 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 13:38:28,351 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:38:28,374 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:38:28,375 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:38:30,476 - INFO - 访问首页
+2025-04-12 13:38:30,498 - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:30] "GET / HTTP/1.1" 200 -
+2025-04-12 13:38:30,586 - INFO - 获取学生列表: 48个
+2025-04-12 13:38:30,607 - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:30] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:38:30,669 - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:30] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:38:30,670 - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:30] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:38:30,671 - INFO - 127.0.0.1 - - [12/Apr/2025 13:38:30] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:40:15,229 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:40:15,233 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:40:15,233 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:40:15,233 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:40:15,233 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:40:15,234 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:40:15,234 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:40:15,235 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:40:15,235 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:40:15,236 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:40:15,236 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-12 13:40:15,236 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:40:15,256 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:40:15,256 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:40:17,365 - INFO - 访问首页
+2025-04-12 13:40:17,379 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:17] "GET / HTTP/1.1" 200 -
+2025-04-12 13:40:17,473 - INFO - 获取学生列表: 48个
+2025-04-12 13:40:17,474 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:17] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:40:17,556 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:17] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:40:17,557 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:17] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:40:17,558 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:17] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:40:30,036 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:40:30,040 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:40:30,040 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:40:30,040 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:40:30,041 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:40:30,041 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:40:30,041 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:40:30,042 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:40:30,042 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:40:30,042 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:40:30,042 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:40:30,043 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:40:30,067 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:40:30,067 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:40:32,101 - INFO - 访问首页
+2025-04-12 13:40:32,116 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:32] "GET / HTTP/1.1" 200 -
+2025-04-12 13:40:32,197 - INFO - 获取学生列表: 48个
+2025-04-12 13:40:32,198 - INFO - 127.0.0.1 - - [12/Apr/2025 13:40:32] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:40:48,585 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:40:48,588 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:40:48,589 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:40:48,589 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:40:48,589 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:40:48,589 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:40:48,590 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:40:48,590 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:40:48,590 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:40:48,591 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:40:48,591 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 13:40:48,591 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:40:48,612 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:40:48,613 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:41:15,766 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:41:15,769 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:41:15,769 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:41:15,769 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:41:15,770 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:41:15,770 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:41:15,770 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:41:15,770 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:41:15,770 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:41:15,770 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:41:15,770 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 13:41:15,771 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:41:15,793 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:41:15,793 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:41:18,895 - INFO - 访问首页
+2025-04-12 13:41:18,911 - INFO - 127.0.0.1 - - [12/Apr/2025 13:41:18] "GET / HTTP/1.1" 200 -
+2025-04-12 13:41:19,004 - INFO - 获取学生列表: 48个
+2025-04-12 13:41:19,006 - INFO - 127.0.0.1 - - [12/Apr/2025 13:41:19] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:41:19,033 - INFO - 127.0.0.1 - - [12/Apr/2025 13:41:19] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:41:54,239 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:41:54,243 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:41:54,244 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:41:54,244 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:41:54,244 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:41:54,244 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:41:54,245 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:41:54,245 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:41:54,246 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:41:54,246 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:41:54,246 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-12 13:41:54,247 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:41:54,271 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:41:54,271 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:41:56,723 - INFO - 访问首页
+2025-04-12 13:41:56,738 - INFO - 127.0.0.1 - - [12/Apr/2025 13:41:56] "GET / HTTP/1.1" 200 -
+2025-04-12 13:41:56,830 - INFO - 获取学生列表: 48个
+2025-04-12 13:41:56,831 - INFO - 127.0.0.1 - - [12/Apr/2025 13:41:56] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:41:56,859 - INFO - 127.0.0.1 - - [12/Apr/2025 13:41:56] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:42:19,403 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:42:19,406 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:42:19,407 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:42:19,407 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:42:19,407 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:42:19,407 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:42:19,407 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:42:19,407 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:42:19,408 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:42:19,408 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:42:19,408 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 13:42:19,408 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:42:19,428 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:42:19,429 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:42:21,914 - INFO - 访问首页
+2025-04-12 13:42:21,927 - INFO - 127.0.0.1 - - [12/Apr/2025 13:42:21] "GET / HTTP/1.1" 200 -
+2025-04-12 13:42:22,015 - INFO - 获取学生列表: 48个
+2025-04-12 13:42:22,016 - INFO - 127.0.0.1 - - [12/Apr/2025 13:42:22] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:43:37,079 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:43:37,084 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:43:37,085 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:43:37,085 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:43:37,085 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:43:37,086 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:43:37,086 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:43:37,086 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:43:37,086 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:43:37,087 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:43:37,087 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:43:37,087 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:43:37,109 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:43:37,110 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:43:39,497 - INFO - 访问首页
+2025-04-12 13:43:39,513 - INFO - 127.0.0.1 - - [12/Apr/2025 13:43:39] "GET / HTTP/1.1" 200 -
+2025-04-12 13:43:39,608 - INFO - 获取学生列表: 48个
+2025-04-12 13:43:39,609 - INFO - 127.0.0.1 - - [12/Apr/2025 13:43:39] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:43:39,637 - INFO - 127.0.0.1 - - [12/Apr/2025 13:43:39] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:44:04,412 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:44:04,415 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:44:04,415 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:44:04,416 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:44:04,416 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:44:04,416 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:44:04,416 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:44:04,417 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:44:04,417 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:44:04,418 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:44:04,418 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 13:44:04,418 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:44:04,441 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:44:04,441 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:44:06,453 - INFO - 访问首页
+2025-04-12 13:44:06,468 - INFO - 127.0.0.1 - - [12/Apr/2025 13:44:06] "GET / HTTP/1.1" 200 -
+2025-04-12 13:44:06,549 - INFO - 获取学生列表: 48个
+2025-04-12 13:44:06,549 - INFO - 127.0.0.1 - - [12/Apr/2025 13:44:06] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:44:56,254 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:44:56,258 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:44:56,259 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:44:56,259 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:44:56,259 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:44:56,260 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:44:56,260 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:44:56,260 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:44:56,260 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:44:56,261 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:44:56,261 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 13:44:56,261 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:44:56,281 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:44:56,282 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:44:58,169 - INFO - 访问首页
+2025-04-12 13:44:58,185 - INFO - 127.0.0.1 - - [12/Apr/2025 13:44:58] "GET / HTTP/1.1" 200 -
+2025-04-12 13:44:58,279 - INFO - 获取学生列表: 48个
+2025-04-12 13:44:58,280 - INFO - 127.0.0.1 - - [12/Apr/2025 13:44:58] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:44:58,311 - INFO - 127.0.0.1 - - [12/Apr/2025 13:44:58] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:45:18,472 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:45:18,476 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:45:18,476 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:45:18,477 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:45:18,477 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:45:18,477 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:45:18,477 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:45:18,477 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:45:18,477 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:45:18,478 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:45:18,478 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, OPTIONS, GET)', '/ (HEAD, OPTIONS, GET)', '/api/students (HEAD, OPTIONS, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (HEAD, OPTIONS, GET)', '/static/<path:filename> (HEAD, OPTIONS, GET)']
+2025-04-12 13:45:18,478 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:45:18,499 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:45:18,500 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:45:43,921 - INFO - 访问首页
+2025-04-12 13:45:43,934 - INFO - 127.0.0.1 - - [12/Apr/2025 13:45:43] "GET / HTTP/1.1" 200 -
+2025-04-12 13:45:44,028 - INFO - 获取学生列表: 48个
+2025-04-12 13:45:44,028 - INFO - 127.0.0.1 - - [12/Apr/2025 13:45:44] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:45:44,059 - INFO - 127.0.0.1 - - [12/Apr/2025 13:45:44] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:46:09,414 - INFO - 访问首页
+2025-04-12 13:46:09,415 - INFO - 127.0.0.1 - - [12/Apr/2025 13:46:09] "GET / HTTP/1.1" 200 -
+2025-04-12 13:46:09,508 - INFO - 获取学生列表: 48个
+2025-04-12 13:46:09,508 - INFO - 127.0.0.1 - - [12/Apr/2025 13:46:09] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:46:31,986 - INFO - 访问首页
+2025-04-12 13:46:31,987 - INFO - 127.0.0.1 - - [12/Apr/2025 13:46:31] "GET / HTTP/1.1" 200 -
+2025-04-12 13:46:32,066 - INFO - 获取学生列表: 48个
+2025-04-12 13:46:32,067 - INFO - 127.0.0.1 - - [12/Apr/2025 13:46:32] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:46:37,580 - INFO - 访问首页
+2025-04-12 13:46:37,583 - INFO - 127.0.0.1 - - [12/Apr/2025 13:46:37] "GET / HTTP/1.1" 200 -
+2025-04-12 13:46:37,668 - INFO - 获取学生列表: 48个
+2025-04-12 13:46:37,669 - INFO - 127.0.0.1 - - [12/Apr/2025 13:46:37] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:46:59,476 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:46:59,479 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:46:59,480 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:46:59,480 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:46:59,480 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:46:59,480 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:46:59,481 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:46:59,481 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:46:59,482 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:46:59,482 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:46:59,483 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:46:59,483 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:46:59,506 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:46:59,506 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:47:01,161 - INFO - 访问首页
+2025-04-12 13:47:01,176 - INFO - 127.0.0.1 - - [12/Apr/2025 13:47:01] "GET / HTTP/1.1" 200 -
+2025-04-12 13:47:01,259 - INFO - 获取学生列表: 48个
+2025-04-12 13:47:01,260 - INFO - 127.0.0.1 - - [12/Apr/2025 13:47:01] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:47:01,289 - INFO - 127.0.0.1 - - [12/Apr/2025 13:47:01] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:47:45,097 - INFO - 访问首页
+2025-04-12 13:47:45,098 - INFO - 127.0.0.1 - - [12/Apr/2025 13:47:45] "GET / HTTP/1.1" 200 -
+2025-04-12 13:47:45,205 - INFO - 获取学生列表: 48个
+2025-04-12 13:47:45,205 - INFO - 127.0.0.1 - - [12/Apr/2025 13:47:45] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:47:45,206 - INFO - 127.0.0.1 - - [12/Apr/2025 13:47:45] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:48:13,621 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:48:13,625 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:48:13,625 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:48:13,625 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:48:13,626 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:48:13,626 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:48:13,626 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:48:13,626 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:48:13,626 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:48:13,627 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:48:13,627 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 13:48:13,627 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:48:13,653 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:48:13,654 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:48:15,734 - INFO - 访问首页
+2025-04-12 13:48:15,749 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:15] "GET / HTTP/1.1" 200 -
+2025-04-12 13:48:15,834 - INFO - 获取学生列表: 48个
+2025-04-12 13:48:15,835 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:15] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:48:15,869 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:15] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:48:51,399 - INFO - 访问首页
+2025-04-12 13:48:51,400 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:51] "GET / HTTP/1.1" 200 -
+2025-04-12 13:48:51,469 - INFO - 获取学生列表: 48个
+2025-04-12 13:48:51,470 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:51] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:48:51,489 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:51] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:48:51,491 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:51] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:48:51,492 - INFO - 127.0.0.1 - - [12/Apr/2025 13:48:51] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:49:09,180 - INFO - 访问首页
+2025-04-12 13:49:09,181 - INFO - 127.0.0.1 - - [12/Apr/2025 13:49:09] "GET / HTTP/1.1" 200 -
+2025-04-12 13:49:09,251 - INFO - 获取学生列表: 48个
+2025-04-12 13:49:09,252 - INFO - 127.0.0.1 - - [12/Apr/2025 13:49:09] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:49:22,686 - INFO - 访问首页
+2025-04-12 13:49:22,687 - INFO - 127.0.0.1 - - [12/Apr/2025 13:49:22] "GET / HTTP/1.1" 200 -
+2025-04-12 13:49:22,755 - INFO - 获取学生列表: 48个
+2025-04-12 13:49:22,756 - INFO - 127.0.0.1 - - [12/Apr/2025 13:49:22] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:52:04,504 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:52:04,508 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:52:04,508 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:52:04,508 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:52:04,508 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:52:04,509 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:52:04,509 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:52:04,509 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:52:04,509 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:52:04,509 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:52:04,510 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 13:52:04,510 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:52:04,537 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:52:04,537 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:52:06,973 - INFO - 访问首页
+2025-04-12 13:52:06,993 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:06] "GET / HTTP/1.1" 200 -
+2025-04-12 13:52:07,089 - INFO - 获取学生列表: 48个
+2025-04-12 13:52:07,090 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:07] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:52:07,172 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:07] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:52:07,174 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:07] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:52:07,174 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:07] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:52:43,752 - INFO - 访问首页
+2025-04-12 13:52:43,753 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:43] "GET / HTTP/1.1" 200 -
+2025-04-12 13:52:43,836 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:43] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:52:43,836 - INFO - 获取学生列表: 48个
+2025-04-12 13:52:43,837 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:43] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:52:43,837 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:43] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:52:43,848 - INFO - 127.0.0.1 - - [12/Apr/2025 13:52:43] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:53:19,226 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:53:19,229 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:53:19,230 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:53:19,230 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:53:19,230 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:53:19,230 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:53:19,230 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:53:19,230 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:53:19,231 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:53:19,231 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:53:19,231 - INFO - 注册的路由: ['/static/<path:filename> (HEAD, GET, OPTIONS)', '/ (HEAD, GET, OPTIONS)', '/api/students (HEAD, GET, OPTIONS)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (HEAD, GET, OPTIONS)', '/static/<path:filename> (HEAD, GET, OPTIONS)']
+2025-04-12 13:53:19,231 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:53:19,251 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:53:19,251 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:53:21,194 - INFO - 访问首页
+2025-04-12 13:53:21,206 - INFO - 127.0.0.1 - - [12/Apr/2025 13:53:21] "GET / HTTP/1.1" 200 -
+2025-04-12 13:53:21,297 - INFO - 获取学生列表: 48个
+2025-04-12 13:53:21,297 - INFO - 127.0.0.1 - - [12/Apr/2025 13:53:21] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:53:21,325 - INFO - 127.0.0.1 - - [12/Apr/2025 13:53:21] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:53:42,046 - INFO - 访问首页
+2025-04-12 13:53:42,047 - INFO - 127.0.0.1 - - [12/Apr/2025 13:53:42] "GET / HTTP/1.1" 200 -
+2025-04-12 13:53:42,120 - INFO - 获取学生列表: 48个
+2025-04-12 13:53:42,121 - INFO - 127.0.0.1 - - [12/Apr/2025 13:53:42] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:56:21,631 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 13:56:21,634 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 13:56:21,634 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 13:56:21,634 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 13:56:21,635 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 13:56:21,635 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 13:56:21,635 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 13:56:21,635 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 13:56:21,635 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 13:56:21,635 - INFO - 模板文件列表: ['index.html']
+2025-04-12 13:56:21,636 - INFO - 注册的路由: ['/static/<path:filename> (GET, OPTIONS, HEAD)', '/ (GET, OPTIONS, HEAD)', '/api/students (GET, OPTIONS, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, OPTIONS, HEAD)', '/static/<path:filename> (GET, OPTIONS, HEAD)']
+2025-04-12 13:56:21,636 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 13:56:21,659 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 13:56:21,659 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 13:56:24,932 - INFO - 访问首页
+2025-04-12 13:56:24,946 - INFO - 127.0.0.1 - - [12/Apr/2025 13:56:24] "GET / HTTP/1.1" 200 -
+2025-04-12 13:56:25,052 - INFO - 获取学生列表: 48个
+2025-04-12 13:56:25,053 - INFO - 127.0.0.1 - - [12/Apr/2025 13:56:25] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 13:56:25,144 - INFO - 127.0.0.1 - - [12/Apr/2025 13:56:25] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:56:25,145 - INFO - 127.0.0.1 - - [12/Apr/2025 13:56:25] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 13:56:25,145 - INFO - 127.0.0.1 - - [12/Apr/2025 13:56:25] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:05:57,066 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 14:05:57,070 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 14:05:57,071 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 14:05:57,071 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 14:05:57,071 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 14:05:57,071 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 14:05:57,071 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 14:05:57,072 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 14:05:57,072 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 14:05:57,072 - INFO - 模板文件列表: ['index.html']
+2025-04-12 14:05:57,073 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-12 14:05:57,073 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 14:05:57,095 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 14:05:57,096 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 14:06:01,478 - INFO - 访问首页
+2025-04-12 14:06:01,492 - INFO - 127.0.0.1 - - [12/Apr/2025 14:06:01] "GET / HTTP/1.1" 200 -
+2025-04-12 14:06:01,591 - INFO - 获取学生列表: 48个
+2025-04-12 14:06:01,592 - INFO - 127.0.0.1 - - [12/Apr/2025 14:06:01] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 14:06:01,673 - INFO - 127.0.0.1 - - [12/Apr/2025 14:06:01] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:06:01,675 - INFO - 127.0.0.1 - - [12/Apr/2025 14:06:01] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:06:01,675 - INFO - 127.0.0.1 - - [12/Apr/2025 14:06:01] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:12:30,785 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 14:12:30,788 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 14:12:30,789 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 14:12:30,789 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 14:12:30,789 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 14:12:30,789 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 14:12:30,790 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 14:12:30,790 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 14:12:30,791 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 14:12:30,791 - INFO - 模板文件列表: ['index.html']
+2025-04-12 14:12:30,791 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, GET, HEAD)', '/ (OPTIONS, GET, HEAD)', '/api/students (OPTIONS, GET, HEAD)', '/api/students (POST, OPTIONS)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (OPTIONS, GET, HEAD)', '/static/<path:filename> (OPTIONS, GET, HEAD)']
+2025-04-12 14:12:30,792 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 14:12:30,812 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 14:12:30,813 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 14:12:33,429 - INFO - 访问首页
+2025-04-12 14:12:33,449 - INFO - 127.0.0.1 - - [12/Apr/2025 14:12:33] "GET / HTTP/1.1" 200 -
+2025-04-12 14:12:33,556 - INFO - 获取学生列表: 48个
+2025-04-12 14:12:33,557 - INFO - 127.0.0.1 - - [12/Apr/2025 14:12:33] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 14:12:33,655 - INFO - 127.0.0.1 - - [12/Apr/2025 14:12:33] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:12:33,657 - INFO - 127.0.0.1 - - [12/Apr/2025 14:12:33] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:12:33,658 - INFO - 127.0.0.1 - - [12/Apr/2025 14:12:33] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:14:44,501 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 14:14:44,506 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-12 14:14:44,507 - INFO - 当前工作目录: D:\PythonProjects\RollCallPy
+2025-04-12 14:14:44,507 - INFO - 静态文件目录: D:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 14:14:44,507 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 14:14:44,508 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 14:14:44,508 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 14:14:44,509 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 14:14:44,509 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 14:14:44,509 - INFO - 模板文件列表: ['index.html']
+2025-04-12 14:14:44,509 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-12 14:14:44,510 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-12 14:14:44,535 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 14:14:44,535 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 14:14:47,269 - INFO - 访问首页
+2025-04-12 14:14:47,283 - INFO - 127.0.0.1 - - [12/Apr/2025 14:14:47] "GET / HTTP/1.1" 200 -
+2025-04-12 14:14:47,382 - INFO - 获取学生列表: 48个
+2025-04-12 14:14:47,383 - INFO - 127.0.0.1 - - [12/Apr/2025 14:14:47] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 14:14:47,462 - INFO - 127.0.0.1 - - [12/Apr/2025 14:14:47] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:14:47,464 - INFO - 127.0.0.1 - - [12/Apr/2025 14:14:47] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:14:47,464 - INFO - 127.0.0.1 - - [12/Apr/2025 14:14:47] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:19:06,367 - INFO - ==================================================
+2025-04-12 14:19:06,367 - INFO - 班级点名器启动
+2025-04-12 14:19:06,367 - INFO - Python版本: 3.13.2
+2025-04-12 14:19:06,368 - INFO - 系统平台: win32
+2025-04-12 14:19:06,368 - INFO - 当前目录: D:\PythonProjects\RollCallPy
+2025-04-12 14:19:06,368 - INFO - 已切换工作目录到: d:\PythonProjects\RollCallPy
+2025-04-12 14:19:06,368 - INFO - 确保目标目录存在: d:\PythonProjects\RollCallPy\static, d:\PythonProjects\RollCallPy\templates
+2025-04-12 14:19:08,404 - INFO - 使用端口: 5000
+2025-04-12 14:19:08,406 - INFO - 准备执行主应用文件: d:\PythonProjects\RollCallPy\main.py
+2025-04-12 14:19:08,406 - INFO - 开始执行 main.py ...
+2025-04-12 14:19:08,655 - INFO - Flask 应用将使用端口: 5000
+2025-04-12 14:19:08,659 - INFO - ============================== Flask 应用启动检查 ==============================
+2025-04-12 14:19:08,659 - INFO - 当前工作目录: d:\PythonProjects\RollCallPy
+2025-04-12 14:19:08,660 - INFO - 静态文件目录: d:\PythonProjects\RollCallPy\static (存在: True)
+2025-04-12 14:19:08,660 - INFO - 模板文件目录: templates (存在: True)
+2025-04-12 14:19:08,660 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-12 14:19:08,660 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-12 14:19:08,661 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-12 14:19:08,661 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-12 14:19:08,661 - INFO - 模板文件列表: ['index.html']
+2025-04-12 14:19:08,662 - INFO - 注册的应用路由: ['/ (GET)', '/api/students (GET)', '/api/students (POST)', '/api/students/<name> (DELETE)', '/api/random (GET)']
+2025-04-12 14:19:08,662 - INFO - Flask应用即将在端口 5000 上启动 (直接运行)
+2025-04-12 14:19:08,682 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-12 14:19:08,682 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-12 14:19:09,408 - INFO - 尝试打开浏览器: http://127.0.0.1:5000
+2025-04-12 14:19:09,601 - INFO - 访问首页
+2025-04-12 14:19:09,622 - INFO - 127.0.0.1 - - [12/Apr/2025 14:19:09] "GET / HTTP/1.1" 200 -
+2025-04-12 14:19:09,749 - INFO - 获取学生列表: 48个
+2025-04-12 14:19:09,784 - INFO - 127.0.0.1 - - [12/Apr/2025 14:19:09] "GET /api/students HTTP/1.1" 200 -
+2025-04-12 14:19:09,968 - INFO - 127.0.0.1 - - [12/Apr/2025 14:19:09] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:19:09,987 - INFO - 127.0.0.1 - - [12/Apr/2025 14:19:09] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-12 14:19:09,996 - INFO - 127.0.0.1 - - [12/Apr/2025 14:19:09] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -

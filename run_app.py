@@ -19,7 +19,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("app_log.txt", encoding='utf-8'),
+        logging.FileHandler("app_log.txt", encoding='utf-8', mode='a'), # 使用追加模式
         logging.StreamHandler()
     ]
 )
@@ -41,198 +41,174 @@ def resource_path(relative_path):
     try:
         # PyInstaller创建临时文件夹并将路径存储在_MEIPASS中
         base_path = sys._MEIPASS
-        logging.info(f"使用PyInstaller临时路径: {base_path}")
-    except Exception:
-        base_path = os.path.abspath(".")
-        logging.info(f"使用当前目录作为基础路径: {base_path}")
+        # logging.info(f"使用PyInstaller临时路径: {base_path}")
+    except AttributeError:
+        # 如果不是通过PyInstaller运行，则使用当前文件所在的目录
+        base_path = os.path.abspath(os.path.dirname(__file__))
+        # logging.info(f"使用脚本目录作为基础路径: {base_path}")
     
     path = os.path.join(base_path, relative_path)
-    logging.info(f"资源路径: {relative_path} -> {path}")
+    # logging.info(f"解析资源路径: {relative_path} -> {path}")
     return path
 
 def ensure_static_files():
-    """确保静态文件存在"""
+    """确保静态文件和模板文件存在，并在需要时从打包资源中复制"""
     try:
-        static_dir = os.path.join(os.getcwd(), 'static')
-        if not os.path.exists(static_dir):
-            os.makedirs(static_dir)
-            logging.info(f"创建静态文件目录: {static_dir}")
-        
-        # 检查音频文件是否存在，如不存在则从打包资源复制
-        audio_files = ['roll.mp3', 'select.mp3', 'click.mp3']
-        for audio in audio_files:
-            target_path = os.path.join(static_dir, audio)
-            if not os.path.exists(target_path) or os.path.getsize(target_path) < 1000:  # 文件不存在或过小
-                # 尝试从多个可能的位置查找源文件
-                possible_sources = [
-                    resource_path(os.path.join('static', audio)),
-                    os.path.join('static', audio),
-                    resource_path(audio)
-                ]
-                
-                for source_path in possible_sources:
-                    if os.path.exists(source_path) and os.path.getsize(source_path) > 1000:
+        base_dir = os.getcwd() # 使用当前工作目录作为目标基础
+        static_dir = os.path.join(base_dir, 'static')
+        templates_dir = os.path.join(base_dir, 'templates')
+
+        # 确保目标目录存在
+        os.makedirs(static_dir, exist_ok=True)
+        os.makedirs(templates_dir, exist_ok=True)
+        logging.info(f"确保目标目录存在: {static_dir}, {templates_dir}")
+
+        # 定义需要的文件和它们的源路径 (相对于打包资源或脚本目录)
+        required_files = {
+            os.path.join(static_dir, 'roll.mp3'): resource_path(os.path.join('static', 'roll.mp3')),
+            os.path.join(static_dir, 'select.mp3'): resource_path(os.path.join('static', 'select.mp3')),
+            os.path.join(static_dir, 'click.mp3'): resource_path(os.path.join('static', 'click.mp3')),
+            os.path.join(templates_dir, 'index.html'): resource_path(os.path.join('templates', 'index.html')),
+        }
+
+        for target_path, source_path in required_files.items():
+            # 检查目标文件是否存在或是否有效 (例如，大小检查 > 100字节)
+            is_valid = os.path.exists(target_path) and os.path.getsize(target_path) > 100
+
+            if not is_valid:
+                if os.path.exists(source_path):
+                    try:
                         shutil.copy2(source_path, target_path)
-                        logging.info(f"已复制音频文件: {source_path} -> {target_path}")
-                        break
+                        logging.info(f"已复制文件: {os.path.basename(source_path)} -> {target_path}")
+                    except Exception as copy_error:
+                         logging.error(f"复制文件失败: {source_path} 到 {target_path} - {copy_error}")
                 else:
-                    logging.warning(f"未找到有效的音频文件源: {audio}")
-        
-        # 确保templates目录存在
-        templates_dir = os.path.join(os.getcwd(), 'templates')
-        if not os.path.exists(templates_dir):
-            os.makedirs(templates_dir)
-            source_templates = resource_path('templates')
-            if os.path.exists(source_templates):
-                for template_file in os.listdir(source_templates):
-                    source = os.path.join(source_templates, template_file)
-                    target = os.path.join(templates_dir, template_file)
-                    if os.path.isfile(source):
-                        shutil.copy2(source, target)
-                        logging.info(f"已复制模板文件: {source} -> {target}")
+                    # 如果源文件不存在，也记录下来
+                    logging.warning(f"源文件未找到，无法复制: {source_path} (目标: {target_path})")
+            # else:
+            #     # 文件已存在，可以考虑不打印日志，减少干扰
+            #     # logging.debug(f"文件已存在且有效: {target_path}")
+
     except Exception as e:
-        logging.error(f"确保静态文件时出错: {str(e)}")
+        logging.error(f"确保文件时出错: {str(e)}")
         logging.error(traceback.format_exc())
 
 def open_browser(port):
     """打开浏览器访问应用"""
     url = f"http://127.0.0.1:{port}"
     try:
+        logging.info(f"尝试打开浏览器: {url}")
         webbrowser.open_new(url)
-        logging.info(f"已尝试打开浏览器: {url}")
     except Exception as e:
         logging.error(f"打开浏览器失败: {str(e)}")
 
 def main():
     logging.info("="*50)
     logging.info("班级点名器启动")
-    logging.info(f"当前工作目录: {os.getcwd()}")
-    logging.info(f"Python版本: {sys.version}")
+    logging.info(f"Python版本: {sys.version.split()[0]}")
     logging.info(f"系统平台: {sys.platform}")
     
-    # 调整Python路径，确保模块导入正常工作
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    if current_dir not in sys.path:
-        sys.path.insert(0, current_dir)
-        logging.info(f"将当前目录添加到Python路径: {current_dir}")
+    # 移除 sys.path 修改
     
-    # 如果是PyInstaller打包环境，也添加_MEIPASS路径
     try:
-        meipass = sys._MEIPASS
-        if meipass not in sys.path:
-            sys.path.insert(0, meipass)
-            logging.info(f"将PyInstaller临时目录添加到Python路径: {meipass}")
-    except:
-        pass
-    
-    # 打印Python搜索路径，便于调试
-    logging.info(f"Python搜索路径: {sys.path}")
-        
-    try:
-        # 获取当前脚本所在目录
+        # 获取当前脚本所在目录并切换工作目录
+        # 这对于确保相对路径 (如 static/, templates/, students.json) 正确解析很重要
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        logging.info(f"脚本目录: {current_dir}")
-        os.chdir(current_dir)
-        logging.info(f"切换工作目录到: {current_dir}")
+        if os.getcwd() != current_dir:
+             logging.info(f"当前目录: {os.getcwd()}")
+             os.chdir(current_dir)
+             logging.info(f"已切换工作目录到: {current_dir}")
+        else:
+            logging.info(f"当前工作目录已是脚本目录: {current_dir}")
         
-        # 确保静态文件和目录存在
+        # 确保静态/模板文件和目录存在
         ensure_static_files()
         
-        # 确保students.json文件存在
-        if not os.path.exists('students.json'):
-            with open('students.json', 'w', encoding='utf-8') as f:
-                f.write('[]')
-                logging.info("已创建空的学生名单文件")
+        # 确保students.json文件存在于当前工作目录
+        students_json_path = os.path.join(current_dir, 'students.json')
+        if not os.path.exists(students_json_path):
+            try:
+                with open(students_json_path, 'w', encoding='utf-8') as f:
+                    f.write('[]')
+                logging.info(f"已创建空的学生名单文件: {students_json_path}")
+            except IOError as e:
+                logging.error(f"创建 students.json 文件失败: {e}")
+                input("错误：无法创建数据文件，请检查权限。按Enter键退出...")
+                sys.exit(1)
         
         # 寻找可用端口
         port = find_available_port()
         if port is None:
-            logging.error("无法找到可用端口，请关闭占用5000-5050端口的应用后重试")
-            input("按Enter键退出...")
+            logging.error("无法找到可用端口 (5000-5050)，请检查端口占用情况")
+            input("错误：所需端口已被占用。按Enter键退出...")
             sys.exit(1)
         
         logging.info(f"使用端口: {port}")
         
-        # 设置环境变量，传递给main.py
+        # 设置环境变量，传递给main.py (虽然exec不需要，但保留可能有用)
         os.environ['APP_PORT'] = str(port)
         
         # 运行主应用
         try:
-            # 延迟打开浏览器
-            browser_timer = Timer(2.5, functools.partial(open_browser, port))
+            # 延迟打开浏览器 (稍微缩短延迟)
+            browser_timer = Timer(1.0, functools.partial(open_browser, port))
             browser_timer.daemon = True
             browser_timer.start()
             
-            logging.info("正在导入主应用...")
-            try:
-                # 不要直接导入main模块，而是使用exec执行它
-                possible_main_files = [
-                    os.path.join(os.path.dirname(__file__), 'main.py'),
-                    resource_path('main.py'),
-                    os.path.join(os.getcwd(), 'main.py'),
-                    os.path.abspath('main.py')
-                ]
-                
-                main_file = None
-                for path in possible_main_files:
-                    if os.path.exists(path) and os.path.getsize(path) > 0:
-                        main_file = path
-                        logging.info(f"找到有效的main.py文件: {main_file}")
-                        break
-                
-                logging.info(f"尝试加载主应用文件: {main_file}")
-                
-                if main_file and os.path.exists(main_file):
-                    # 读取main.py内容并执行
-                    with open(main_file, 'r', encoding='utf-8') as f:
+            main_py_path = os.path.join(current_dir, 'main.py')
+            logging.info(f"准备执行主应用文件: {main_py_path}")
+            
+            if os.path.exists(main_py_path):
+                try:
+                    with open(main_py_path, 'r', encoding='utf-8') as f:
                         main_code = f.read()
                     
-                    # 确保Flask应用在主线程中运行
-                    logging.info(f"执行main.py内容... (文件大小: {os.path.getsize(main_file)})")
-                    exec(main_code, globals())
-                    logging.info("主应用执行完成")
-                else:
-                    # 如果找不到main.py文件，尝试直接导入
-                    logging.info("未找到main.py文件，尝试直接导入...")
-                    import main
-            except Exception as e:
-                logging.error(f"执行main.py失败: {str(e)}")
-                logging.error(traceback.format_exc())
-                
-                # 尝试直接导入作为备选方案
-                logging.info("尝试备选方案：直接导入main模块...")
-                import main
-                
-            logging.info("应用已启动，请在浏览器中使用...")
-            
-            # 保持程序运行，直到用户按下Ctrl+C
-            try:
-                logging.info("程序正在运行中，按Ctrl+C可以退出...")
-                while True:
-                    time.sleep(1)
-            except KeyboardInterrupt:
-                logging.info("用户中断，程序退出")
-        except ImportError as e:
-            logging.error(f"导入主应用失败: {str(e)}")
-            logging.error(traceback.format_exc())
-            input("按任意键退出...")
-            sys.exit(1)
+                    # 创建一个全局命名空间来执行代码
+                    # 显式传递 __name__ = '__main__' 来运行 main.py 中的主块
+                    # 传递 __file__ 让 main.py 知道自己的路径
+                    main_globals = {
+                        '__name__': '__main__',
+                        '__file__': main_py_path,
+                        # 可以传递其他需要的全局变量
+                    }
+                    logging.info("开始执行 main.py ...")
+                    exec(main_code, main_globals)
+                    # exec 会阻塞直到 Flask 服务器停止 (例如 Ctrl+C)
+                    logging.info("main.py 执行完毕 (Flask服务器已停止)")
+                except SystemExit:
+                    logging.info("Flask 服务器正常退出。")
+                except Exception as exec_error:
+                    logging.error(f"执行 main.py 时发生错误: {exec_error}")
+                    logging.error(traceback.format_exc())
+                    input("错误：应用主逻辑执行失败。按Enter键退出...")
+                    sys.exit(1)
+            else:
+                 logging.error(f"主应用文件未找到: {main_py_path}")
+                 input("错误：缺少核心应用文件。按Enter键退出...")
+                 sys.exit(1)
+
         except Exception as e:
-            logging.error(f"启动应用失败: {str(e)}")
+            # 这个捕获可能不会执行，因为 exec 内部的错误会在上面捕获
+            logging.error(f"启动应用时发生意外错误: {str(e)}")
             logging.error(traceback.format_exc())
-            input("按任意键退出...")
+            input("发生未知启动错误。按任意键退出...")
             sys.exit(1)
+            
     except Exception as e:
         logging.error(f"程序初始化失败: {str(e)}")
         logging.error(traceback.format_exc())
-        input("发生错误，按任意键退出...")
+        input("发生严重初始化错误，按任意键退出...")
         sys.exit(1)
+
+    # 移除末尾的循环，app.run() 或 exec(main.py) 会阻塞
+    logging.info("班级点名器退出")
 
 if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        logging.error(f"程序运行失败: {str(e)}")
-        logging.error(traceback.format_exc())
-        input("发生严重错误，按任意键退出...")
+        # 这个捕获通常只在main()完全失败时触发
+        logging.critical(f"程序运行时发生顶层错误: {str(e)}")
+        logging.critical(traceback.format_exc())
+        input("发生无法处理的严重错误，按任意键退出...")
         sys.exit(1) 

@@ -30,12 +30,14 @@ pip install -r requirements.txt
 
 3. 运行应用：
 ```bash
-python main.py
+# 推荐使用 run_app.py 启动，它会处理环境检查、端口选择和启动
+python run_app.py
 ```
+应用启动后会自动尝试打开浏览器。如果未自动打开，请手动访问日志中提示的 `http://127.0.0.1:端口号` 地址。
 
-4. 在浏览器中访问：
-```
-http://localhost:5000
+也可以直接运行 `main.py` (用于开发或调试):
+```bash
+python main.py
 ```
 
 ## 使用说明
@@ -58,20 +60,20 @@ http://localhost:5000
 .
 ├── README.md              # 项目说明文档
 ├── requirements.txt       # Python依赖包列表
-├── main.py               # Flask应用主文件
-├── run_app.py            # 应用运行入口
-├── build.bat             # Windows打包脚本
-├── namepicker.spec       # PyInstaller打包配置
-├── students.json         # 学生数据存储文件
-├── app_log.txt           # 应用日志文件
-├── 使用说明.md           # 详细使用说明
-├── 打包说明.txt          # 打包相关说明
-├── static/              # 静态资源目录
-│   ├── roll.mp3        # 滚动音效
-│   ├── select.mp3      # 选中音效
-│   └── click.mp3       # 点击音效
-└── templates/          # 模板目录
-    └── index.html      # 主页面
+├── main.py                # Flask应用主文件 (定义路由和逻辑)
+├── run_app.py             # 应用启动脚本 (处理环境、端口、启动main.py)
+├── build.bat              # Windows打包脚本 (可选)
+├── namepicker.spec        # PyInstaller打包配置 (可选)
+├── students.json          # 学生数据存储文件
+├── app_log.txt            # 应用日志文件
+├── 使用说明.md            # 详细使用说明 (可选)
+├── 打包说明.txt           # 打包相关说明 (可选)
+├── static/                # 静态资源目录 (存放音效等)
+│   ├── roll.mp3
+│   ├── select.mp3
+│   └── click.mp3
+└── templates/             # 模板目录 (存放HTML)
+    └── index.html
 ```
 
 ## 注意事项
