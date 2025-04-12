@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>班级点名器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f3e7ff 0%, #ffe7f4 100%);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            animation: fadeInPage 1s ease-in;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            color: #6b21a8;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: #666;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: #6b21a8;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #581c87;
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: #6b21a8;
+        }
+
+        .btn-ghost:hover {
+            background-color: #f3e7ff;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -5px rgba(107, 33, 168, 0.2);
+        }
+
+        .result-card {
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+        }
+
+        .name-display {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #6b21a8;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center center;
+        }
+
+        .name-display.rolling {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(107, 33, 168, 0.3);
+        }
+
+        .name-display.selected {
+            animation: selectedName 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes selectedName {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .input {
+            flex: 1;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .student-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .student-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .student-item:hover {
+            transform: scale(1.02);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .selected-name {
+            animation: fadeIn 0.5s ease;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 8px;
+            height: 16px;
+            opacity: 0;
+            will-change: transform;
+        }
+
+        .confetti-square {
+            width: 10px;
+            height: 10px;
+        }
+
+        .confetti-rectangle {
+            width: 8px;
+            height: 16px;
+        }
+
+        .confetti-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .confetti-star {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid;
+            background-color: transparent !important;
+        }
+
+        @keyframes confetti-slow {
+            0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+            100% { transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg); }
+        }
+
+        @keyframes confetti-medium {
+            0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+            100% { transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg); }
+        }
+
+        @keyframes confetti-fast {
+            0% { transform: translate3d(0, 0, 0) rotateX(0) rotateY(0); }
+            100% { transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg); }
+        }
+
+        @keyframes confetti-float {
+            0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+            100% { transform: translate3d(50px, 105vh, 0) rotate(360deg); }
+        }
+
+        @keyframes confetti-zigzag {
+            0% { transform: translate3d(0, 0, 0) rotateZ(0); }
+            25% { transform: translate3d(25px, 25vh, 0) rotateZ(45deg); }
+            50% { transform: translate3d(-25px, 50vh, 0) rotateZ(-45deg); }
+            75% { transform: translate3d(25px, 75vh, 0) rotateZ(45deg); }
+            100% { transform: translate3d(0, 105vh, 0) rotateZ(0); }
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #6b21a8;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible-icon {
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .collapsible-icon.collapsed {
+            transform: rotate(180deg);
+        }
+        
+        .collapsible-content {
+            max-height: 400px;
+            overflow-y: auto;
+            transition: max-height 0.5s ease;
+        }
+        
+        .collapsible-content.collapsed {
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .student-name {
+            flex: 1;
+            padding: 0.25rem;
+            border-radius: 0.25rem;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .student-name:hover {
+            border-color: #ddd;
+            background-color: #f0f0f0;
+        }
+        
+        .student-name:focus {
+            outline: none;
+            border-color: #6b21a8;
+            background-color: #fff;
+        }
+        
+        .student-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn-icon {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        #randomBtn {
+            font-size: 1.25rem;
+            padding: 1rem 2rem;
+        }
+
+        .dice-icon {
+            margin-right: 0.5rem;
+        }
+
+        .result-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(107, 33, 168, 0.1),
+                transparent
+            );
+            transition: all 0.5s ease;
+        }
+
+        .result-card.shine::before {
+            left: 100%;
+        }
+        
+        /* 3D翻转卡片效果 */
+        .flip-card {
+            perspective: 1000px;
+            transition: transform 0.5s;
+        }
+        
+        .flip-animation {
+            animation: flip-card 1s ease-out;
+            transform-style: preserve-3d;
+        }
+        
+        @keyframes flip-card {
+            0% { transform: rotateY(0deg); }
+            50% { transform: rotateY(180deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        /* 按钮波纹效果 */
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .btn:focus:not(:active)::after {
+            animation: ripple 0.8s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 0.6;
+            }
+            100% {
+                transform: scale(100);
+                opacity: 0;
+            }
+        }
+        
+        /* 页面加载动画 */
+        @keyframes fadeInPage {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 动态背景渐变 */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #f3e7ff 0%, #ffe7f4 100%);
+            animation: gradientBG 15s ease infinite;
+            background-size: 400% 400%;
+        }
+        
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">班级点名器</h1>
+            <p class="subtitle">点击下方按钮开始随机点名</p>
+        </div>
+
+        <div class="center-content">
+            <button id="randomBtn" class="btn btn-primary">
+                <span class="dice-icon">🎲</span>开始点名
+            </button>
+        </div>
+
+        <div class="card result-card">
+            <div id="nameDisplay" class="name-display">等待点名...</div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2 class="card-title">添加学生</h2>
+                <div class="input-group">
+                    <input type="text" id="newStudent" placeholder="输入学生姓名" class="input">
+                    <button id="addStudentBtn" class="btn btn-primary">添加</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">
+                    学生名单
+                    <span id="studentListToggle" class="collapsible-icon">▼</span>
+                </h2>
+                <div id="studentListContainer" class="collapsible-content">
+                    <div id="studentList" class="student-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加音效文件 -->
+    <audio id="rollSound" preload="auto">
+        <source src="/static/roll.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="selectSound" preload="auto">
+        <source src="/static/select.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound" preload="auto">
+        <source src="/static/click.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // 全局变量
+        let students = [];
+        let audioContext = null;
+        let audioUnlocked = false;
+        
+        const randomBtn = document.getElementById('randomBtn');
+        const nameDisplay = document.getElementById('nameDisplay');
+        const studentList = document.getElementById('studentList');
+        const newStudent = document.getElementById('newStudent');
+        const addStudentBtn = document.getElementById('addStudentBtn');
+        const rollSound = document.getElementById('rollSound');
+        const selectSound = document.getElementById('selectSound');
+        const clickSound = document.getElementById('clickSound');
+        const resultCard = document.querySelector('.result-card');
+
+        // 音效加载状态
+        let soundsLoaded = {
+            roll: false,
+            select: false,
+            click: false
+        };
+        
+        // 音效错误处理
+        rollSound.addEventListener('canplaythrough', () => {
+            console.log('Roll sound loaded');
+            soundsLoaded.roll = true;
+        });
+        selectSound.addEventListener('canplaythrough', () => {
+            console.log('Select sound loaded');
+            soundsLoaded.select = true;
+        });
+        clickSound.addEventListener('canplaythrough', () => {
+            console.log('Click sound loaded');
+            soundsLoaded.click = true;
+        });
+        
+        // 预先强制加载音频文件
+        function preloadAudio() {
+            [rollSound, selectSound, clickSound].forEach(sound => {
+                // 设置音量为0并尝试播放以促使加载
+                sound.volume = 0;
+                sound.load();
+                
+                // 添加错误监听器
+                sound.addEventListener('error', (e) => {
+                    console.error(`音效加载失败 ${sound.id}:`, e);
+                    // 尝试重新加载
+                    setTimeout(() => {
+                        sound.load();
+                    }, 1000);
+                });
+            });
+        }
+        
+        // 解锁音频 - 用户首次交互时调用
+        function unlockAudio() {
+            if (audioUnlocked) return Promise.resolve();
+            
+            console.log('尝试解锁音频...');
+            
+            // 创建音频上下文
+            try {
+                if (!audioContext) {
+                    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+                    audioContext = new AudioContext();
+                }
+                
+                // 恢复音频上下文
+                if (audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+            } catch (e) {
+                console.warn('创建AudioContext失败:', e);
+            }
+            
+            // 尝试播放所有音频
+            const promises = [rollSound, selectSound, clickSound].map(sound => {
+                sound.volume = 0.1;  // 低音量
+                
+                // 先暂停重置
+                sound.pause();
+                sound.currentTime = 0;
+                
+                // 重新加载
+                sound.load();
+                
+                // 尝试播放
+                const playPromise = sound.play();
+                if (playPromise !== undefined) {
+                    return playPromise
+                        .then(() => {
+                            sound.pause();
+                            sound.currentTime = 0;
+                            console.log(`音频 ${sound.id} 解锁成功`);
+                            return true;
+                        })
+                        .catch(e => {
+                            console.warn(`音频 ${sound.id} 解锁失败:`, e);
+                            return false;
+                        });
+                }
+                return Promise.resolve(false);
+            });
+            
+            return Promise.all(promises)
+                .then(results => {
+                    const unlocked = results.some(r => r);
+                    audioUnlocked = unlocked;
+                    console.log('音频解锁状态:', audioUnlocked);
+                    
+                    // 重置音量
+                    [rollSound, selectSound, clickSound].forEach(sound => {
+                        sound.volume = 1.0;
+                    });
+                    
+                    return unlocked;
+                });
+        }
+
+        // 安全地播放音效
+        function playSound(sound) {
+            // 首先尝试解锁音频
+            if (!audioUnlocked) {
+                unlockAudio().then(() => attemptPlaySound(sound));
+            } else {
+                attemptPlaySound(sound);
+            }
+        }
+        
+        // 尝试播放音效
+        function attemptPlaySound(sound) {
+            // 检查音效对象存在并且有play方法
+            if (sound && typeof sound.play === 'function') {
+                try {
+                    // 重置播放位置
+                    sound.pause();
+                    sound.currentTime = 0;
+                    
+                    // 确保音量合适
+                    if (sound === rollSound) {
+                        sound.volume = 0.5;
+                    } else {
+                        sound.volume = 1.0;
+                    }
+                    
+                    // 尝试播放
+                    const playPromise = sound.play();
+                    
+                    if (playPromise !== undefined) {
+                        playPromise.catch(error => {
+                            console.warn(`播放音效 '${sound.id}' 失败:`, error.message);
+                            
+                            // 如果是自动播放策略问题，再次尝试解锁并播放
+                            if (error.name === 'NotAllowedError') {
+                                console.info("自动播放受限，尝试再次解锁");
+                                unlockAudio().then(() => {
+                                    setTimeout(() => attemptPlaySound(sound), 100);
+                                });
+                            }
+                        });
+                    }
+                } catch (error) {
+                    console.warn(`播放音效 '${sound.id}' 出错:`, error);
+                }
+            } else {
+                console.warn('无效的音效对象:', sound);
+            }
+        }
+
+        // 创建五彩纸屑效果
+        function createConfetti() {
+            const colors = [
+                '#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff',
+                '#00ffff', '#ff4500', '#8a2be2', '#ff1493', '#32cd32',
+                '#ffa500', '#9370db', '#3cb371', '#ff6347', '#7fffd4',
+                '#f08080', '#ffd700', '#da70d6', '#20b2aa', '#87cefa'
+            ];
+            
+            const shapes = ['confetti-rectangle', 'confetti-square', 'confetti-circle', 'confetti-star'];
+            const animations = ['confetti-slow', 'confetti-medium', 'confetti-fast', 'confetti-float', 'confetti-zigzag'];
+            
+            // 清除之前的彩带
+            document.querySelectorAll('.confetti').forEach(el => el.remove());
+            
+            for (let i = 0; i < 200; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                
+                // 随机形状
+                const shape = shapes[Math.floor(Math.random() * shapes.length)];
+                confetti.classList.add(shape);
+                
+                // 随机样式
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const animationDuration = Math.random() * 3 + 2;
+                const animationDelay = Math.random() * 3;
+                const initialRotation = Math.random() * 360;
+                const initialX = Math.random() * window.innerWidth;
+                const scale = Math.random() * 0.6 + 0.7; // 0.7 - 1.3
+                
+                // 为星星形状设置边框颜色
+                if (shape === 'confetti-star') {
+                    confetti.style.borderBottomColor = color;
+                } else {
+                    confetti.style.backgroundColor = color;
+                }
+                
+                confetti.style.left = initialX + 'px';
+                confetti.style.top = '-30px';
+                confetti.style.transform = `rotate(${initialRotation}deg) scale(${scale})`;
+                confetti.style.opacity = '0.9';
+                
+                // 随机动画
+                const animation = animations[Math.floor(Math.random() * animations.length)];
+                confetti.style.animation = `${animation} ${animationDuration}s ease-out ${animationDelay}s forwards`;
+                
+                document.body.appendChild(confetti);
+                setTimeout(() => {
+                    confetti.style.opacity = '0';
+                    confetti.style.transition = 'opacity 0.3s ease';
+                    setTimeout(() => confetti.remove(), 300);
+                }, (animationDuration + animationDelay) * 1000 - 300);
+            }
+        }
+
+        // 加载学生名单
+        async function loadStudents() {
+            try {
+                const response = await fetch('/api/students');
+                students = await response.json();
+                updateStudentList();
+            } catch (error) {
+                console.error('加载学生名单失败:', error);
+            }
+        }
+
+        // 更新学生名单显示
+        function updateStudentList() {
+            const oldItems = studentList.querySelectorAll('.student-item');
+            const newHtml = students.map(student => `
+                <div class="student-item" style="opacity: 0; transform: translateX(20px);">
+                    <span class="student-name" contenteditable="true" data-original="${student}">${student}</span>
+                    <div class="student-actions">
+                        <button onclick="saveEditedName(this, '${student}')" class="btn btn-ghost btn-icon">✓</button>
+                        <button onclick="cancelEditName(this)" class="btn btn-ghost btn-icon">✗</button>
+                        <button onclick="deleteStudent('${student}')" class="btn btn-ghost btn-icon">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            studentList.innerHTML = newHtml;
+            
+            // 添加渐入动画
+            const newItems = studentList.querySelectorAll('.student-item');
+            newItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.transition = 'all 0.3s ease';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, index * 50);
+            });
+            
+            // 设置名字编辑事件
+            studentList.querySelectorAll('.student-name').forEach(nameSpan => {
+                nameSpan.addEventListener('focus', function() {
+                    // 保存原始值以便取消
+                    this.setAttribute('data-editing', 'true');
+                });
+                
+                nameSpan.addEventListener('blur', function() {
+                    // 如果点击的是保存或取消按钮，则不在这里处理
+                    if (!this.closest('.student-item').querySelector('.student-actions:hover')) {
+                        // 自动保存
+                        const originalName = this.getAttribute('data-original');
+                        const newName = this.textContent.trim();
+                        if (newName !== originalName && newName !== '') {
+                            saveStudentName(originalName, newName);
+                        } else {
+                            this.textContent = originalName;
+                        }
+                    }
+                    this.removeAttribute('data-editing');
+                });
+                
+                nameSpan.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        this.blur();
+                    } else if (e.key === 'Escape') {
+                        e.preventDefault();
+                        this.textContent = this.getAttribute('data-original');
+                        this.blur();
+                    }
+                });
+            });
+        }
+        
+        // 保存编辑后的名字
+        async function saveEditedName(button, originalName) {
+            const studentItem = button.closest('.student-item');
+            const nameSpan = studentItem.querySelector('.student-name');
+            const newName = nameSpan.textContent.trim();
+            
+            if (newName === originalName || newName === '') {
+                nameSpan.textContent = originalName;
+                return;
+            }
+            
+            await saveStudentName(originalName, newName);
+        }
+        
+        // 取消编辑名字
+        function cancelEditName(button) {
+            const studentItem = button.closest('.student-item');
+            const nameSpan = studentItem.querySelector('.student-name');
+            nameSpan.textContent = nameSpan.getAttribute('data-original');
+            nameSpan.blur();
+        }
+        
+        // 保存学生名字
+        async function saveStudentName(originalName, newName) {
+            if (!newName || students.includes(newName)) {
+                alert(newName ? '该名字已存在' : '名字不能为空');
+                return;
+            }
+            
+            try {
+                playSound(clickSound);
+                
+                // 先删除旧名字
+                const deleteResponse = await fetch(`/api/students/${encodeURIComponent(originalName)}`, {
+                    method: 'DELETE'
+                });
+                
+                if (!deleteResponse.ok) {
+                    const error = await deleteResponse.json();
+                    throw new Error(error.error || '更新失败');
+                }
+                
+                // 添加新名字
+                const addResponse = await fetch('/api/students', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name: newName })
+                });
+                
+                if (!addResponse.ok) {
+                    const error = await addResponse.json();
+                    throw new Error(error.error || '更新失败');
+                }
+                
+                await loadStudents();
+            } catch (error) {
+                console.error('更新学生名字失败:', error);
+                alert(error.message || '更新失败，请重试');
+            }
+        }
+        
+        // 切换学生列表的显示和隐藏
+        function toggleStudentList() {
+            const container = document.getElementById('studentListContainer');
+            const toggle = document.getElementById('studentListToggle');
+            
+            container.classList.toggle('collapsed');
+            toggle.classList.toggle('collapsed');
+            
+            // 播放音效
+            playSound(clickSound);
+        }
+
+        // 添加学生
+        async function addStudent() {
+            const name = newStudent.value.trim();
+            if (name) {
+                try {
+                    playSound(clickSound);
+                    const response = await fetch('/api/students', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name })
+                    });
+                    
+                    if (!response.ok) {
+                        const error = await response.json();
+                        throw new Error(error.error || '添加失败');
+                    }
+                    
+                    newStudent.value = '';
+                    await loadStudents();
+                } catch (error) {
+                    console.error('添加学生失败:', error);
+                    alert(error.message || '添加失败，请重试');
+                }
+            }
+        }
+
+        // 删除学生
+        async function deleteStudent(name) {
+            try {
+                playSound(clickSound);
+                const response = await fetch(`/api/students/${encodeURIComponent(name)}`, {
+                    method: 'DELETE'
+                });
+                
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || '删除失败');
+                }
+                
+                await loadStudents();
+            } catch (error) {
+                console.error('删除学生失败:', error);
+                alert(error.message || '删除失败，请重试');
+            }
+        }
+
+        // 随机点名初始化检查
+        function prepareRandomSelect() {
+            // 首先检查是否有学生
+            if (students.length === 0) {
+                nameDisplay.textContent = '请先添加学生';
+                addFlipAnimation(resultCard);
+                return false;
+            }
+            
+            // 预加载音效文件
+            [rollSound, selectSound, clickSound].forEach(sound => {
+                if (!sound.readyState) {
+                    sound.load();
+                }
+            });
+            
+            return true;
+        }
+        
+        // 随机点名
+        async function randomSelect() {
+            if (!prepareRandomSelect()) return;
+
+            randomBtn.disabled = true;
+            nameDisplay.style.opacity = '1';
+            resultCard.classList.add('flip-card');
+            
+            // 播放滚动音效
+            playSound(rollSound);
+            rollSound.volume = 0.5;  // 设置音量为50%
+            rollSound.loop = true;   // 循环播放
+
+            const duration = 3000; // 持续3秒
+            const startTime = Date.now();
+            let lastRollTime = 0;
+
+            const animate = () => {
+                const now = Date.now();
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // 非线性减速效果
+                const speed = Math.pow(1 - progress, 2);
+                
+                // 控制名字更新频率
+                if (now - lastRollTime > (50 + (progress * 200))) {
+                    const randomIndex = Math.floor(Math.random() * students.length);
+                    nameDisplay.textContent = students[randomIndex];
+                    nameDisplay.classList.add('rolling');
+                    lastRollTime = now;
+                }
+                
+                // 调整音量
+                if (!rollSound.paused) {
+                    rollSound.volume = Math.max(0.1, speed * 0.5);
+                }
+                
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    finalizeSelection();
+                }
+            };
+
+            animate();
+        }
+
+        // 完成选择
+        async function finalizeSelection() {
+            try {
+                const response = await fetch('/api/random');
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || '选择失败');
+                }
+                
+                const data = await response.json();
+                
+                // 停止滚动音效
+                if (rollSound) {
+                    rollSound.loop = false;
+                    try {
+                        rollSound.pause();
+                    } catch (e) {
+                        console.warn('停止滚动音效失败:', e);
+                    }
+                }
+                
+                // 播放选中音效
+                playSound(selectSound);
+                
+                nameDisplay.classList.remove('rolling');
+                nameDisplay.classList.add('selected');
+                // 应用打字机效果
+                typewriterEffect(nameDisplay, data.name, 80);
+                
+                resultCard.classList.add('shine');
+                addFlipAnimation(resultCard);
+                createConfetti();
+                
+                setTimeout(() => {
+                    nameDisplay.classList.remove('selected');
+                    resultCard.classList.remove('shine');
+                    randomBtn.disabled = false;
+                }, 1500);
+            } catch (error) {
+                console.error('随机选择失败:', error);
+                alert(error.message || '选择失败，请重试');
+                randomBtn.disabled = false;
+                
+                // 确保出错时也停止音效
+                if (rollSound) {
+                    rollSound.loop = false;
+                    try {
+                        rollSound.pause();
+                    } catch (e) {}
+                }
+            }
+        }
+
+        // 添加学生时的动画效果
+        function animateAddStudent(element) {
+            element.style.animation = 'none';
+            element.offsetHeight; // 触发重排以重置动画
+            element.style.animation = 'slideIn 0.5s ease forwards';
+        }
+        
+        // 3D翻转动画
+        function addFlipAnimation(element) {
+            element.classList.add('flip-animation');
+            setTimeout(() => {
+                element.classList.remove('flip-animation');
+            }, 1000);
+        }
+        
+        // 打字机效果
+        function typewriterEffect(element, text, speed = 50) {
+            element.textContent = '';
+            let i = 0;
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // 事件监听
+        randomBtn.addEventListener('click', function() {
+            // 先解锁音频，然后执行点名
+            unlockAudio().then(() => randomSelect());
+        });
+        
+        addStudentBtn.addEventListener('click', function() {
+            // 先解锁音频，然后添加学生
+            unlockAudio().then(() => addStudent());
+        });
+        
+        newStudent.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                unlockAudio().then(() => addStudent());
+            }
+        });
+        
+        // 添加学生列表折叠展开事件
+        document.getElementById('studentListToggle').addEventListener('click', function() {
+            unlockAudio().then(() => toggleStudentList());
+        });
+        
+        // 添加全局点击事件来解锁音频
+        document.addEventListener('click', function() {
+            if (!audioUnlocked) {
+                unlockAudio();
+            }
+        }, { once: true });
+        
+        // 波纹效果
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const rect = button.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripples = document.createElement('span');
+                ripples.style.position = 'absolute';
+                ripples.style.width = '1px';
+                ripples.style.height = '1px';
+                ripples.style.borderRadius = '50%';
+                ripples.style.transform = 'scale(0)';
+                ripples.style.background = 'rgba(255, 255, 255, 0.5)';
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                ripples.style.animation = 'ripple 0.6s linear';
+                
+                button.appendChild(ripples);
+                
+                setTimeout(() => {
+                    ripples.remove();
+                }, 600);
+            });
+        });
+
+        // 页面加载初始化
+        window.addEventListener('DOMContentLoaded', function() {
+            // 立即预加载音频
+            preloadAudio();
+            
+            // 加载学生名单
+            loadStudents();
+        });
+    </script>
+</body>
+</html> 

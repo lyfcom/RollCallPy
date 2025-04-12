@@ -1,0 +1,39 @@
+2025-04-06 12:25:47,841 - INFO - Flask 应用将使用端口: 5000
+2025-04-06 12:25:47,844 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-06 12:25:47,844 - INFO - 当前工作目录: D:\PythonProjects\Pytest2
+2025-04-06 12:25:47,845 - INFO - 静态文件目录: d:\PythonProjects\Pytest2\static (存在: True)
+2025-04-06 12:25:47,845 - INFO - 模板文件目录: templates (存在: True)
+2025-04-06 12:25:47,845 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-06 12:25:47,845 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-06 12:25:47,845 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-06 12:25:47,845 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-06 12:25:47,846 - INFO - 模板文件列表: ['index.html']
+2025-04-06 12:25:47,846 - INFO - 注册的路由: ['/static/<path:filename> (OPTIONS, HEAD, GET)', '/ (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, HEAD, GET)', '/api/students (OPTIONS, POST)', '/api/students/<name> (DELETE, OPTIONS)', '/api/random (OPTIONS, HEAD, GET)', '/static/<path:filename> (OPTIONS, HEAD, GET)']
+2025-04-06 12:25:47,846 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-06 12:25:47,863 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 12:25:47,864 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 12:25:58,342 - INFO - Flask 应用将使用端口: 5000
+2025-04-06 12:25:58,346 - INFO - ============================== Flask 应用启动 ==============================
+2025-04-06 12:25:58,346 - INFO - 当前工作目录: D:\PythonProjects\Pytest2
+2025-04-06 12:25:58,346 - INFO - 静态文件目录: d:\PythonProjects\Pytest2\static (存在: True)
+2025-04-06 12:25:58,346 - INFO - 模板文件目录: templates (存在: True)
+2025-04-06 12:25:58,347 - INFO - 学生名单文件: students.json (存在: True)
+2025-04-06 12:25:58,347 - INFO - 音频文件: roll.mp3 (存在: True, 大小: 12784 字节)
+2025-04-06 12:25:58,347 - INFO - 音频文件: select.mp3 (存在: True, 大小: 13890 字节)
+2025-04-06 12:25:58,347 - INFO - 音频文件: click.mp3 (存在: True, 大小: 18504 字节)
+2025-04-06 12:25:58,347 - INFO - 模板文件列表: ['index.html']
+2025-04-06 12:25:58,348 - INFO - 注册的路由: ['/static/<path:filename> (GET, HEAD, OPTIONS)', '/ (GET, HEAD, OPTIONS)', '/api/students (GET, HEAD, OPTIONS)', '/api/students (OPTIONS, POST)', '/api/students/<name> (OPTIONS, DELETE)', '/api/random (GET, HEAD, OPTIONS)', '/static/<path:filename> (GET, HEAD, OPTIONS)']
+2025-04-06 12:25:58,348 - INFO - Flask应用即将在端口 5000 上启动
+2025-04-06 12:25:58,367 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-06 12:25:58,368 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 12:26:02,381 - INFO - 访问首页
+2025-04-06 12:26:02,394 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:02] "GET / HTTP/1.1" 200 -
+2025-04-06 12:26:02,478 - INFO - 获取学生列表: 48个
+2025-04-06 12:26:02,479 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:02] "GET /api/students HTTP/1.1" 200 -
+2025-04-06 12:26:02,553 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:02] "[35m[1mGET /static/roll.mp3 HTTP/1.1[0m" 206 -
+2025-04-06 12:26:02,560 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:02] "[35m[1mGET /static/select.mp3 HTTP/1.1[0m" 206 -
+2025-04-06 12:26:02,560 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:02] "[35m[1mGET /static/click.mp3 HTTP/1.1[0m" 206 -
+2025-04-06 12:26:07,095 - INFO - 随机选择学生: 王忆
+2025-04-06 12:26:07,095 - INFO - 127.0.0.1 - - [06/Apr/2025 12:26:07] "GET /api/random HTTP/1.1" 200 -
