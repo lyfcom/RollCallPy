@@ -13,6 +13,11 @@ import logging
 import traceback
 import functools
 from threading import Timer
+# ---- Standard Library Imports for Networking/Cleanup ----
+import http.client
+import json
+import atexit
+# -------------------------------------------------------
 
 # 配置日志
 logging.basicConfig(
@@ -24,16 +29,35 @@ logging.basicConfig(
     ]
 )
 
-def is_port_in_use(port):
-    """检查端口是否被占用"""
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        return s.connect_ex(('localhost', port)) == 0
+# --- Constants ---
+PORT_FILE = "rollcall.port"
+APP_IDENTIFIER = "RollCallPy" # Must match main.py
+DEFAULT_START_PORT = 5000
+DEFAULT_MAX_PORT = 5050
+# -----------------
 
-def find_available_port(start_port=5000, max_port=5050):
+def is_port_in_use(port, timeout=0.1):
+    """检查端口是否被占用 (使用稍长一点的超时)"""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.settimeout(timeout)
+        try:
+            # connect_ex returns 0 if connection succeeds
+            result = s.connect_ex(('127.0.0.1', port))
+            return result == 0
+        except socket.timeout:
+            return False # Timeout means nothing is listening or connection is slow
+        except Exception as e:
+            logging.debug(f"Error checking port {port}: {e}")
+            return False
+
+def find_available_port(start_port=DEFAULT_START_PORT, max_port=DEFAULT_MAX_PORT):
     """寻找可用端口"""
+    logging.info(f"寻找可用端口范围: {start_port}-{max_port}")
     for port in range(start_port, max_port):
         if not is_port_in_use(port):
+            logging.info(f"找到可用端口: {port}")
             return port
+    logging.warning("未找到可用端口")
     return None
 
 def resource_path(relative_path):
@@ -102,6 +126,94 @@ def open_browser(port):
     except Exception as e:
         logging.error(f"打开浏览器失败: {str(e)}")
 
+def remove_port_file():
+    """尝试删除端口文件 (用于 atexit 清理)"""
+    try:
+        if os.path.exists(PORT_FILE):
+            os.remove(PORT_FILE)
+            logging.info(f"已删除端口文件: {PORT_FILE}")
+    except Exception as e:
+        logging.warning(f"删除端口文件 {PORT_FILE} 时出错: {e}")
+
+def ping_instance_http(port, timeout=0.5):
+    """使用 http.client ping /ping 端点验证实例"""
+    conn = None
+    try:
+        conn = http.client.HTTPConnection("127.0.0.1", port, timeout=timeout)
+        conn.request("GET", "/ping")
+        response = conn.getresponse()
+        if response.status == 200:
+            try:
+                body = response.read().decode('utf-8')
+                data = json.loads(body)
+                if isinstance(data, dict) and data.get('app') == APP_IDENTIFIER:
+                    logging.debug(f"端口 {port} ping 成功并验证通过。")
+                    return True # Verification successful
+                else:
+                    logging.debug(f"端口 {port} ping 响应内容不匹配: {data}")
+            except json.JSONDecodeError:
+                logging.debug(f"端口 {port} ping 响应不是有效的 JSON: {body[:100]}") # Log first 100 chars
+            except Exception as e:
+                logging.warning(f"解析端口 {port} ping 响应时出错: {e}")
+        else:
+            logging.debug(f"端口 {port} ping 请求返回状态码: {response.status}")
+    except (http.client.HTTPException, socket.timeout, ConnectionRefusedError, ConnectionResetError) as e:
+        logging.debug(f"无法连接或 ping 端口 {port} 超时/被拒: {type(e).__name__}")
+    except Exception as e:
+        logging.warning(f"ping 端口 {port} 时发生意外错误: {e}")
+    finally:
+        if conn:
+            conn.close()
+    return False # Verification failed
+
+def check_and_handle_existing_instance(start_port=DEFAULT_START_PORT, max_port=DEFAULT_MAX_PORT):
+    """优先检查端口文件，然后扫描端口范围验证实例"""
+    # 1. 尝试读取端口文件
+    instance_found_via_file = False
+    if os.path.exists(PORT_FILE):
+        logging.info(f"找到端口文件: {PORT_FILE}")
+        try:
+            with open(PORT_FILE, 'r') as f:
+                content = f.read().strip()
+                if content.isdigit():
+                    port = int(content)
+                    logging.info(f"从文件读取到端口: {port}，正在验证...")
+                    # 使用稍长的超时时间验证这个特定端口
+                    if ping_instance_http(port, timeout=0.8):
+                        logging.info(f"通过端口文件验证成功 (端口 {port})。")
+                        print(f"应用已在端口 {port} 运行，将打开现有实例。")
+                        open_browser(port)
+                        logging.info("已打开浏览器指向现有实例，当前进程将退出。")
+                        sys.exit(0) # 正常退出
+                    else:
+                        logging.warning(f"端口 {port} (来自文件) 验证失败或无响应，可能文件已过期。")
+                        remove_port_file() # 删除可能无效的端口文件
+                else:
+                    logging.warning(f"端口文件 {PORT_FILE} 内容无效: '{content}'")
+                    remove_port_file()
+        except Exception as e:
+            logging.error(f"读取或处理端口文件 {PORT_FILE} 时出错: {e}")
+            remove_port_file() # 出错时也尝试删除
+
+    # 2. 如果通过文件未找到，则扫描端口范围 (Fallback)
+    logging.info(f"未通过端口文件找到运行实例，开始扫描端口 {start_port}-{max_port}...")
+    for port in range(start_port, max_port):
+        # 快速检查端口是否在使用 (避免对每个都 ping)
+        if is_port_in_use(port, timeout=0.1):
+            logging.debug(f"端口 {port} 被占用，尝试 ping 验证...")
+            # 使用稍短的超时时间进行扫描 ping
+            if ping_instance_http(port, timeout=0.2):
+                logging.info(f"通过端口扫描验证成功 (端口 {port})。")
+                print(f"应用已在端口 {port} 运行，将打开现有实例。")
+                open_browser(port)
+                logging.info("已打开浏览器指向现有实例，当前进程将退出。")
+                sys.exit(0) # 正常退出
+            # else: ping 失败，继续扫描下一个端口
+        # else: port 不在使用，继续扫描下一个端口
+
+    logging.info("在指定范围内未检测到正在运行的本应用实例。")
+    return False # 表示没有找到正在运行的实例
+
 def main():
     logging.info("="*50)
     logging.info("班级点名器启动")
@@ -121,6 +233,10 @@ def main():
         else:
             logging.info(f"当前工作目录已是脚本目录: {current_dir}")
         
+        # **** 检查是否已有实例在运行 (优先使用端口文件) ****
+        check_and_handle_existing_instance()
+        # ******************************************************
+
         # 确保静态/模板文件和目录存在
         ensure_static_files()
         
@@ -139,18 +255,30 @@ def main():
         # 寻找可用端口
         port = find_available_port()
         if port is None:
-            logging.error("无法找到可用端口 (5000-5050)，请检查端口占用情况")
-            input("错误：所需端口已被占用。按Enter键退出...")
+            logging.error("无法找到可用端口 (5000-5050)，且未检测到运行中的实例。请检查端口占用情况")
+            input("错误：无法启动应用，没有可用端口。按Enter键退出...")
             sys.exit(1)
         
-        logging.info(f"使用端口: {port}")
+        logging.info(f"将在端口 {port} 启动新实例。")
         
+        # **** 写入端口文件并注册清理 ****
+        try:
+            with open(PORT_FILE, 'w') as f:
+                f.write(str(port))
+            logging.info(f"已将端口 {port} 写入文件: {PORT_FILE}")
+            # 注册退出时清理端口文件的函数
+            atexit.register(remove_port_file)
+            logging.info("已注册退出时清理端口文件的任务。")
+        except IOError as e:
+            logging.warning(f"写入端口文件 {PORT_FILE} 失败: {e} (应用将继续，但快速实例检测可能失效)")
+        # *********************************
+
         # 设置环境变量，传递给main.py (虽然exec不需要，但保留可能有用)
         os.environ['APP_PORT'] = str(port)
         
         # 运行主应用
         try:
-            # 延迟打开浏览器 (稍微缩短延迟)
+            # 延迟打开浏览器
             browser_timer = Timer(1.0, functools.partial(open_browser, port))
             browser_timer.daemon = True
             browser_timer.start()
@@ -171,7 +299,7 @@ def main():
                         '__file__': main_py_path,
                         # 可以传递其他需要的全局变量
                     }
-                    logging.info("开始执行 main.py ...")
+                    logging.info(f"开始执行 main.py (端口: {port})...")
                     exec(main_code, main_globals)
                     # exec 会阻塞直到 Flask 服务器停止 (例如 Ctrl+C)
                     logging.info("main.py 执行完毕 (Flask服务器已停止)")
@@ -180,10 +308,13 @@ def main():
                 except Exception as exec_error:
                     logging.error(f"执行 main.py 时发生错误: {exec_error}")
                     logging.error(traceback.format_exc())
+                    # 尝试清理端口文件即使执行出错
+                    remove_port_file()
                     input("错误：应用主逻辑执行失败。按Enter键退出...")
                     sys.exit(1)
             else:
                  logging.error(f"主应用文件未找到: {main_py_path}")
+                 remove_port_file() # 清理可能已写入的端口文件
                  input("错误：缺少核心应用文件。按Enter键退出...")
                  sys.exit(1)
 
@@ -191,12 +322,14 @@ def main():
             # 这个捕获可能不会执行，因为 exec 内部的错误会在上面捕获
             logging.error(f"启动应用时发生意外错误: {str(e)}")
             logging.error(traceback.format_exc())
+            remove_port_file() # 尝试清理
             input("发生未知启动错误。按任意键退出...")
             sys.exit(1)
             
     except Exception as e:
         logging.error(f"程序初始化失败: {str(e)}")
         logging.error(traceback.format_exc())
+        remove_port_file() # 尝试清理
         input("发生严重初始化错误，按任意键退出...")
         sys.exit(1)
 
@@ -204,11 +337,23 @@ def main():
     logging.info("班级点名器退出")
 
 if __name__ == "__main__":
+    # 添加 finally 确保即使 main 异常退出也记录日志
     try:
         main()
+    except SystemExit as e:
+        # 捕获 sys.exit() 调用，避免打印不必要的错误信息
+        if e.code == 0:
+            logging.info("程序正常退出 (检测到现有实例或用户中断)")
+        else:
+            logging.error(f"程序异常退出，退出码: {e.code}")
+            # atexit 可能不会在所有 sys.exit 路径触发，尝试手动清理
+            remove_port_file()
     except Exception as e:
         # 这个捕获通常只在main()完全失败时触发
         logging.critical(f"程序运行时发生顶层错误: {str(e)}")
         logging.critical(traceback.format_exc())
+        remove_port_file() # 尝试清理
         input("发生无法处理的严重错误，按任意键退出...")
-        sys.exit(1) 
+        sys.exit(1)
+    finally:
+        logging.info("run_app.py 脚本结束。") 

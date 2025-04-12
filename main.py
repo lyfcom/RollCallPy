@@ -27,6 +27,7 @@ app = Flask(__name__, static_folder='static', template_folder='templates')
 # 学生名单文件路径
 STUDENTS_FILE = 'students.json'
 MAX_STUDENTS = 100  # 最大学生数限制
+APP_IDENTIFIER = "RollCallPy" # 应用标识符
 
 def open_browser():
     url = f"http://127.0.0.1:{port}/"
@@ -128,6 +129,12 @@ def get_random_student():
     chosen = random.choice(students)
     logging.info(f"随机选择学生: {chosen}")
     return jsonify({'name': chosen})
+
+@app.route('/ping', methods=['GET'])
+def ping():
+    """用于实例检测的简单响应接口"""
+    # logging.info("Received ping request for instance check.") # 可以取消注释用于调试
+    return jsonify({'app': APP_IDENTIFIER, 'status': 'ok'}) 
 
 @app.errorhandler(404)
 def not_found_error(error):

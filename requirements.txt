@@ -5,3 +5,4 @@ colorama
 itsdangerous
 Jinja2
 MarkupSafe
+requests
