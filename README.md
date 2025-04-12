@@ -1,96 +1,118 @@
 # 班级点名器
 
-一个基于Flask的班级随机点名网页应用，具有精美的动画效果和音效反馈。
+[![Python 3.6+](https://img.shields.io/badge/Python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
+[![Flask](https://img.shields.io/badge/Flask-2.0%2B-green.svg)](https://flask.palletsprojects.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 功能特点
+一个基于 Flask 的班级随机点名应用，具有现代化的界面设计、流畅的动画效果和即时的音效反馈。
 
-- 随机点名功能，带有流畅的动画效果
-- 实时音效反馈系统
-- 学生名单管理（添加/删除）
-- 精美的视觉效果（五彩纸屑、闪光效果等）
-- 完全本地运行，无需联网
-- 响应式设计，适配各种屏幕尺寸
-- 支持打包为独立可执行文件
+## 📋 功能特点
 
-## 技术栈
+- **随机点名**：随机选择学生，带有平滑的卡片切换动画和声音提示
+- **学生管理**：添加、编辑、删除学生信息，支持实时更新列表
+- **美观界面**：精心设计的现代化 UI，礼花特效和平滑过渡动画
+- **单例运行**：启动时检测已运行的实例，避免重复启动
+- **离线运行**：完全本地运行，无需互联网连接
+- **跨平台**：支持 Windows、macOS 和 Linux 操作系统
+- **可打包**：支持使用 PyInstaller 打包为独立可执行文件
 
-- 后端：Flask
-- 前端：原生JavaScript + CSS3
-- 数据存储：JSON文件
-- 动画：CSS3 Animations + JavaScript Animations
-- 打包工具：PyInstaller
+## 🛠 技术栈
 
-## 安装说明
+- **后端**：Flask (Python Web 框架)
+- **前端**：原生 JavaScript、HTML5、CSS3
+- **数据存储**：本地 JSON 文件
+- **动画**：CSS3 动画与 JavaScript Web Animations API
+- **打包工具**：PyInstaller
+- **音频处理**：HTML5 Audio API
 
-1. 确保已安装Python 3.6+
-2. 安装依赖：
-```bash
-pip install -r requirements.txt
-```
+## 📥 安装说明
 
-3. 运行应用：
-```bash
-# 推荐使用 run_app.py 启动，它会处理环境检查、端口选择和启动
-python run_app.py
-```
-应用启动后会自动尝试打开浏览器。如果未自动打开，请手动访问日志中提示的 `http://127.0.0.1:端口号` 地址。
+### 环境要求
 
-也可以直接运行 `main.py` (用于开发或调试):
-```bash
-python main.py
-```
+- Python 3.6 或更高版本
+- 标准库 `http.client` 和 `socket` (用于实例检测)
 
-## 使用说明
+### 步骤
 
-1.  **启动应用**: 双击 `run_app.exe` (或者通过命令行运行 `python run_app.py`)。
-    *   **单例运行**: 如果应用已经在后台运行，再次启动会直接打开现有的应用页面，而不是启动一个新的实例。
-2.  **添加学生**: 在"添加学生"输入框中输入学生姓名，点击"添加"按钮或按回车键。
-3.  **编辑/删除学生**: 在学生列表中，可以直接点击学生姓名进行修改（修改后按Enter或点击✓保存，按Esc或点击✗取消），或点击🗑️图标删除学生。
-4.  **随机点名**: 点击页面上方的"开始点名"按钮。
-5.  **退出应用**: 关闭 Flask 服务器运行的命令行窗口 (如果可见)，或者关闭浏览器页面通常不会完全退出后台进程，可能需要手动结束进程（或等待系统处理）。
+1. **克隆或下载本仓库**
 
-## 项目结构
+2. **安装依赖**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **运行应用**
+   ```bash
+   # 推荐使用 run_app.py 启动，它会处理环境检查、端口选择和单例启动
+   python run_app.py
+   ```
+   
+   应用启动后会自动尝试打开浏览器。如果未自动打开，请手动访问日志中提示的 URL（通常是 `http://127.0.0.1:端口号`）。
+   
+   也可以直接运行 `main.py` (仅适用于开发或调试):
+   ```bash
+   python main.py
+   ```
+
+## 🎮 使用指南
+
+1. **启动应用**
+   - 双击 `run_app.exe` (打包版本) 或运行 `python run_app.py`
+   - **单例运行**：如果应用已在后台运行，再次启动会直接打开现有的应用页面，而不是启动一个新的实例
+
+2. **添加学生**
+   - 在"添加学生"输入框中输入学生姓名
+   - 点击"添加"按钮或按回车键
+
+3. **管理学生**
+   - **编辑**：点击学生名称，修改后按 Enter 保存或点击 ✓，按 Esc 或点击 ✗ 取消
+   - **删除**：点击学生旁边的 🗑️ 图标
+
+4. **随机点名**
+   - 点击页面上方的"开始点名"按钮
+   - 程序会随机选择一名学生，展示动画和播放音效
+
+5. **退出应用**
+   - 关闭命令行窗口或结束后台进程
+
+## 📁 项目结构
 
 ```
 .
-├── README.md              # 项目说明文档
-├── requirements.txt       # Python依赖包列表
-├── main.py                # Flask应用主文件 (定义路由和逻辑)
-├── run_app.py             # 应用启动脚本 (处理环境、端口、启动main.py)
-├── build.bat              # Windows打包脚本 (可选)
-├── namepicker.spec        # PyInstaller打包配置 (可选)
-├── students.json          # 学生数据存储文件
+├── README.md              # 项目文档
+├── requirements.txt       # Python 依赖包列表
+├── main.py                # Flask 应用主文件 (路由和业务逻辑)
+├── run_app.py             # 应用启动脚本 (单例检测、环境检查)
+├── rollcall.port          # 运行时自动生成的端口文件 (用于单例检测)
+├── students.json          # 学生数据 JSON 文件
 ├── app_log.txt            # 应用日志文件
-├── 使用说明.md            # 详细使用说明 (可选)
-├── 打包说明.txt           # 打包相关说明 (可选)
-├── static/                # 静态资源目录 (存放音效等)
-│   ├── roll.mp3
-│   ├── select.mp3
-│   └── click.mp3
-└── templates/             # 模板目录 (存放HTML)
-    └── index.html
+├── build.bat              # Windows 打包脚本 (可选)
+├── namepicker.spec        # PyInstaller 打包配置 (可选)
+├── static/                # 静态资源目录
+│   ├── roll.mp3           # 滚动音效
+│   ├── select.mp3         # 选中音效
+│   └── click.mp3          # 点击音效
+└── templates/             # 模板目录
+    └── index.html         # 主页面 (HTML/CSS/JavaScript)
 ```
 
-## 注意事项
+## ⚠️ 注意事项
 
-1.  学生名单保存在本地的 `students.json` 文件中。
-2.  应用日志保存在 `app_log.txt` 中，便于排查问题。
-3.  建议使用现代浏览器（Chrome、Firefox、Edge等）以获得最佳体验。
-4.  **单例启动**: 应用启动时会检查端口 `5000` 到 `5050` 是否被占用。
-    *   如果检测到端口被占用，会尝试向该端口发送一个特殊的 "ping" 请求来确认是否为本应用的另一个实例。
-    *   只有确认是本应用实例后，才会打开现有实例的页面并退出当前启动。
-    *   如果端口被其他程序占用，或者 "ping" 验证失败，则会继续尝试寻找其他可用端口启动新实例。
-5.  如果所有检查的端口都被占用（无论是否为本应用实例），且没有找到可启动的空闲端口，应用将无法启动。
+1. **数据存储**：学生数据保存在本地 `students.json` 文件中，不会上传到任何服务器。
+2. **日志记录**：应用日志保存在 `app_log.txt` 中，有助于排查运行问题。
+3. **浏览器兼容性**：建议使用现代浏览器（Chrome、Firefox、Edge等）以获得最佳体验。
+4. **单例检测机制**：
+   - 应用使用端口文件和 HTTP ping 检测机制确保同时只有一个实例运行
+   - 当检测到已有实例时，自动打开浏览器访问该实例，然后退出当前启动
+5. **端口使用**：应用使用 5000-5050 范围内的端口，请确保这些端口未被其他应用占用。
 
-## 开发者说明
+## 🔧 开发者说明
 
-- 音效系统使用Web Audio API
-- 动画使用requestAnimationFrame实现流畅效果
-- 使用CSS3 transform和animation实现视觉效果
-- 数据持久化使用JSON文件存储
-- 使用PyInstaller进行应用打包
-- 日志系统记录应用运行状态
+- **音效系统**：使用 Web Audio API 处理音频加载和播放
+- **动画系统**：结合 CSS 动画和 JavaScript 动画实现流畅效果
+- **数据持久化**：使用 JSON 文件存储，通过 Flask 后端 API 管理
+- **打包说明**：使用 PyInstaller 打包为独立的可执行文件
 
-## 许可证
+## 📄 许可证
 
-MIT License 
+本项目采用 MIT 许可证。详见 LICENSE 文件。 

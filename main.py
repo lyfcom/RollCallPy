@@ -1,3 +1,9 @@
+"""
+班级点名器 - Flask 后端应用
+
+提供随机点名功能的 RESTful API 服务，管理学生数据，并提供前端界面。
+"""
+
 from flask import Flask, render_template, jsonify, request, send_from_directory, abort
 import random
 import json
@@ -7,7 +13,7 @@ import logging
 from threading import Timer
 from werkzeug.utils import secure_filename
 
-# 配置日志
+# 配置日志系统
 if not logging.getLogger().handlers:
     logging.basicConfig(
         level=logging.INFO,
@@ -18,23 +24,34 @@ if not logging.getLogger().handlers:
         ]
     )
 
-# 获取端口号，默认5000
+# 获取端口号（从环境变量或使用默认值）
 port = int(os.environ.get('APP_PORT', 5000))
 logging.info(f"Flask 应用将使用端口: {port}")
 
+# 初始化 Flask 应用
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-# 学生名单文件路径
-STUDENTS_FILE = 'students.json'
-MAX_STUDENTS = 100  # 最大学生数限制
-APP_IDENTIFIER = "RollCallPy" # 应用标识符
+# 应用配置常量
+STUDENTS_FILE = 'students.json'     # 学生数据文件路径
+MAX_STUDENTS = 100                  # 学生数量上限
+APP_IDENTIFIER = "RollCallPy"       # 应用标识符（用于实例检测）
 
 def open_browser():
+    """
+    尝试打开浏览器访问应用。
+    用于应用启动时自动打开应用页面。
+    """
     url = f"http://127.0.0.1:{port}/"
     webbrowser.open_new(url)
     logging.info(f"尝试打开浏览器: {url}")
 
 def load_students():
+    """
+    从 JSON 文件加载学生列表。
+    
+    Returns:
+        list: 学生名字列表，如果加载失败则返回空列表
+    """
     try:
         if os.path.exists(STUDENTS_FILE):
             with open(STUDENTS_FILE, 'r', encoding='utf-8') as f:
@@ -45,6 +62,15 @@ def load_students():
     return []
 
 def save_students(students):
+    """
+    将学生列表保存到 JSON 文件。
+    
+    Args:
+        students (list): 要保存的学生名字列表
+        
+    Returns:
+        bool: 保存成功返回 True，否则返回 False
+    """
     try:
         with open(STUDENTS_FILE, 'w', encoding='utf-8') as f:
             json.dump(students, f, ensure_ascii=False, indent=2)
@@ -53,8 +79,11 @@ def save_students(students):
         logging.error(f"保存学生名单失败: {str(e)}")
         return False
 
+# Flask 路由定义
+
 @app.route('/')
 def index():
+    """渲染主页"""
     try:
         logging.info("访问首页")
         return render_template('index.html')
@@ -64,6 +93,7 @@ def index():
 
 @app.route('/api/students', methods=['GET'])
 def get_students():
+    """获取所有学生的 API 端点"""
     try:
         students = load_students()
         logging.info(f"获取学生列表: {len(students)}个")
@@ -74,22 +104,23 @@ def get_students():
 
 @app.route('/api/students', methods=['POST'])
 def add_student():
+    """添加学生的 API 端点"""
     students = load_students()
     
     if len(students) >= MAX_STUDENTS:
-        return jsonify({'error': '学生数量已达到上限'}), 400
+        return jsonify({'error': f'学生数量已达到上限 ({MAX_STUDENTS})'}), 400
         
     try:
         data = request.get_json()
         if not data or 'name' not in data:
-            return jsonify({'error': '无效的请求数据'}), 400
+            return jsonify({'error': '无效的请求数据，缺少 name 字段'}), 400
             
         new_student = data['name'].strip()
         if not new_student:
             return jsonify({'error': '学生姓名不能为空'}), 400
             
         if len(new_student) > 50:  # 名字长度限制
-            return jsonify({'error': '学生姓名过长'}), 400
+            return jsonify({'error': '学生姓名过长（最多50个字符）'}), 400
             
         if new_student in students:
             return jsonify({'error': '该学生已存在'}), 400
@@ -103,10 +134,11 @@ def add_student():
             
     except Exception as e:
         logging.error(f"添加学生失败: {str(e)}")
-        return jsonify({'error': '服务器错误'}), 500
+        return jsonify({'error': f'服务器错误: {str(e)}'}), 500
 
 @app.route('/api/students/<name>', methods=['DELETE'])
 def delete_student(name):
+    """删除学生的 API 端点"""
     try:
         students = load_students()
         if name in students:
@@ -119,10 +151,11 @@ def delete_student(name):
         return jsonify({'error': '学生不存在'}), 404
     except Exception as e:
         logging.error(f"删除学生失败: {str(e)}")
-        return jsonify({'error': '服务器错误'}), 500
+        return jsonify({'error': f'服务器错误: {str(e)}'}), 500
 
 @app.route('/api/random', methods=['GET'])
 def get_random_student():
+    """随机选择学生的 API 端点"""
     students = load_students()
     if not students:
         return jsonify({'error': '没有学生'}), 400
@@ -132,22 +165,30 @@ def get_random_student():
 
 @app.route('/ping', methods=['GET'])
 def ping():
-    """用于实例检测的简单响应接口"""
-    # logging.info("Received ping request for instance check.") # 可以取消注释用于调试
+    """
+    实例检测的 ping 端点
+    用于单例检测机制，确认本应用的实例正在运行
+    """
+    # logging.debug("收到实例检测 ping 请求")  # 避免过多日志
     return jsonify({'app': APP_IDENTIFIER, 'status': 'ok'}) 
 
 @app.errorhandler(404)
 def not_found_error(error):
+    """处理 404 错误"""
     logging.warning(f"404错误: {request.path}")
     return jsonify({'error': '资源不存在'}), 404
 
 @app.errorhandler(500)
 def internal_error(error):
+    """处理 500 错误"""
     logging.error(f"500错误: {str(error)}")
     return jsonify({'error': '服务器内部错误'}), 500
 
 def check_environment():
-    """检查环境配置并打印日志"""
+    """
+    检查运行环境并记录关键信息到日志
+    用于应用启动时的环境检查
+    """
     logging.info("="*30 + " Flask 应用启动检查 " + "="*30)
     logging.info(f"当前工作目录: {os.getcwd()}")
     logging.info(f"静态文件目录: {app.static_folder} (存在: {os.path.exists(app.static_folder)})")
@@ -186,8 +227,9 @@ def check_environment():
         logging.error(f"获取路由信息时出错: {e}")
     logging.info(f"注册的应用路由: {routes}")
 
+# 应用入口点
 if __name__ == '__main__':
-    # 检查环境
+    # 执行环境检查
     check_environment()
     
     # 确保数据目录存在
